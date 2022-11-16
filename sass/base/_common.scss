@@ -3,36 +3,7 @@ color: var(--primary-text-color);
 
 background-color: var(--pure-white);
 
-font-family: Roboto, sans-serif;
+// font-family: Roboto, sans-serif;
 
 letter-spacing: 0.03em;
-}
-
-.section {
-    padding: 60px 0;
-
-    @media screen and (min-width: 1200px) {
-        padding: 94px 0;
-    }
-}
-
-.section__title {
-    margin-bottom: 30px;
-
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--sec-title);
-
-    @media screen and (min-width: 1200px) {
-        margin-bottom: 50px;
-
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.66;
-        
-    }
 }
