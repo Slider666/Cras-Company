@@ -1,15 +1,17 @@
-// .header {
-//   border-bottom: 3px solid #ececec;
+.header {
+  border-bottom: 3px solid #ececec;
 
-//   padding: 10px 0;
-// }
+  padding: 6px;
+}
 
-// .header__helmet,
-// .nav,
-// .nav__list {
-//   display: flex;
-//   align-items: center;
-// }
+.header__helmet,
+.nav,
+.nav__list,
+.nav__link,
+.reg-login {
+  display: flex;
+  align-items: center;
+}
 
 // .nav__list {
 //   @media screen and (max-width: 767px) {
