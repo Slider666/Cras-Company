@@ -2,65 +2,69 @@
   color: var(--pure-white);
   background-color: #06071b;
 
+  padding-top: 22px;
+  padding-bottom: 22px;
+
   overflow: hidden;
 }
 
-.contacts__text {
-  position: relative;
-  z-index: 10;
+.contacts--flex {
+  display: flex;
+  justify-content: space-between;
+}
 
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
+.nav--contacts {
+  margin-bottom: 18px;
+}
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.21;
+// .contacts__text {
+//   position: relative;
+//   z-index: 10;
 
-  width: 280px;
-  height: 51px;
+//   margin-bottom: 40px;
+//   margin-left: auto;
+//   margin-right: auto;
 
-  @media screen and (min-width: 768px) {
-    width: 500px;
-    height: 38;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.21;
 
-    font-size: 16px;
-    line-height: 1.18;
-    margin-left: auto;
-    margin-right: auto;
-  }
+//   width: 280px;
+//   height: 51px;
 
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 20px;
-  }
+//   @media screen and (min-width: 768px) {
+//     width: 500px;
+//     height: 38;
+
+//     font-size: 16px;
+//     line-height: 1.18;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+
+//   @media screen and (min-width: 1280px) {
+//     margin-bottom: 20px;
+//   }
+// }
+
+.contacts-item {
+  margin-top: 13px;
+}
+
+.contacts__title {
+  margin-bottom: 25px;
+  padding: 0 19px;
 }
 
 .contacts_social {
   display: flex;
-  justify-content: center;
-
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
-
-  @media screen and (min-width: 1280px) {
-    justify-content: left;
-    margin-bottom: 20px;
-  }
-}
-
-.contacts__list:not(:first-child) {
-  margin-left: 14px;
+  justify-content: space-between;
 }
 
 .social-icon {
   border-radius: 50%;
 
   background-image: var(--buttons-gradient);
-
-  @media screen and (min-width: 1280px) {
-    justify-content: left;
-  }
 }
 
 .social-icon__main {
@@ -95,8 +99,15 @@
   }
 }
 
+.form__button--margin-footer {
+  margin-top: 22px;
+}
+
 .footer {
   z-index: 10;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
 
   border-top: 1px solid var(--pure-white);
 
@@ -104,9 +115,6 @@
 }
 
 .footer__text {
-  padding-top: 22px;
-  padding-bottom: 22px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.21;
