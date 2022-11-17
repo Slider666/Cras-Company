@@ -1,14 +1,16 @@
 :root {
-    --pure-white: #ffffff;
-    --primary-text-color: #757575;
-    --main-text-color: #212121;
-    --sec-title: #212121;
-    --link-color: #2196F3;
-    --bg-color: #F5F4FA;
-    --bg-color-button: #2196F3;
-    --icon-color: #AFB1B8;
+  --pure-white: #ffffff;
+  --primary-text-color: #757575;
+  --main-text-color: #212121;
+  --sec-title: #212121;
+  --link-color: #057198;
+  --bg-color: #f5f4fa;
+  --bg-color-button: #057198;
+  --icon-color: #afb1b8;
 
-    --border-radius: 4px;
+  --buttons-gradient: linear-gradient(90.03deg, #00c5eb -1.97%, #b544fe 89.43%);
 
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius: 4px;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
