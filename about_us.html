@@ -15,43 +15,169 @@
 </head>
 
 <body>
+
     <header class="header">
-        <div class="container">
+
+        <div class="container header__helmet">
+
             <nav class="nav">
+
                 <ul class="nav__list">
+
                     <li class="nav__item">
-                        <a href="index.html">
-                            <img src="./img/logo.jpg" alt="logo" width>
+
+                        <a class="nav__link nav__link-padding-logo" href="index.html">
+
+                            <img src="./images/logo.jpg" alt="логотип" width="78">
+
+                            <span class="logo" lang="en">Cras</span>
+
+                            <span class="logo logo--head" lang="en">Company</span>
                         </a>
                     </li>
+
+                    <!-- <li class="nav__item">
+
+                        <a class="nav__link" href="./profile.html">Мій профіль</a>
+                    </li> -->
+
                     <li class="nav__item">
-                        <a href="./profile.html">Мій профіль</a>
+                        <a class="nav__link nav__link-padding nav__link--active" href="./about_us.html">Про нас</a>
                     </li>
-                    <li class="nav__item nav__link--active">
-                        <a href="./about_us.html">Про нас</a>
+
+                    <li class="nav__item">
+                        <a class="nav__link nav__link-padding" href="./licence.html">Угода
+                            користувача</a>
                     </li>
                 </ul>
             </nav>
 
-            <ul>
-                <li>
-                    Приєднатися
-                </li>
-                <li>
-                    Вхід
-                </li>
-            </ul>
+            <ul class="reg-login">
 
+                <button class="form__button" type="submit">
+                    <span class="form__button__text">Приєднатися</span>
+                </button>
+
+                <button class="form__button form__button--margin" type="submit">
+                    <span class="form__button__text">Вхід</span>
+                </button>
+            </ul>
         </div>
 
     </header>
 
     <main>
 
+        <h1>СЯБИНКА!!!! Я ТЕБЯ ЛЮБКАЮЮЮЮ!!!!!</h1>
+
     </main>
 
-    <footer>
+    <section class="contacts">
 
+        <div class="container contacts--flex">
+
+            <div>
+
+                <nav class="nav nav--contacts">
+
+                    <ul class="nav__list">
+
+                        <li class="nav__item">
+
+                            <a class="nav__link" href="index.html">
+
+                                <span class="logo logo-reset" lang="en">Cras</span>
+
+                                <span class="logo logo--footer" lang="en">Company</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h2 lang="en">Made in future</h2>
+            </div>
+
+            <div>
+
+                <h3>Контакти</h3>
+            </div>
+
+            <div>
+
+                <h3>Компанія</h3>
+
+                <ul>
+                    <li class="contacts-item">
+                        <a class="contacts-link" href="./about_us.html">Про нас</a>
+                    </li>
+
+                    <li class="contacts-item">
+                        <a class="contacts-link" href="./licence.html">Угода користувача</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+
+                <h3 class="contacts__title">Приєднуйтесь</h3>
+
+                <div>
+                    <ul class="contacts_social">
+
+                        <li class="contacts__list">
+                            <a class="socials-link" href="">
+                                <svg class="social-icon" width="40" height="40">
+                                    <use class="social-icon__main" href="./images/icon/sprite.svg#icon-facebook"></use>
+                                    <use class="social-icon__hover"
+                                        href="./images/icon/sprite.svg#icon-facebook-hovered">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="contacts__list">
+                            <a class="socials-link" href="">
+                                <svg class="social-icon" width="40" height="40">
+                                    <use class="social-icon__main" href="./images/icon/sprite.svg#icon-twitter"></use>
+                                    <use class="social-icon__hover"
+                                        href="./images/icon/sprite.svg#icon-twitter-hovered">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="contacts__list">
+                            <a class="socials-link" href="">
+                                <svg class="social-icon" width="40" height="40">
+                                    <use class="social-icon__main" href="./images/icon/sprite.svg#icon-linkedin"></use>
+                                    <use class="social-icon__hover"
+                                        href="./images/icon/sprite.svg#icon-linkedin-hovered">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <ul>
+
+                <button class="form__button" type="submit">
+                    <span class="form__button__text">Приєднатися</span>
+                </button>
+
+                <button class="form__button form__button--margin-footer" type="submit">
+                    <span class="form__button__text">Вхід</span>
+                </button>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text" lang="en">&#169;&#171;CRAS&#187; company. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 
