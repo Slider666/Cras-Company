@@ -27,7 +27,12 @@
 body {
   color: var(--primary-text-color);
   background-color: var(--pure-white);
+  font-family: Montserrat, sans-serif;
   letter-spacing: 0.03em;
+}
+
+.cinzel {
+  font-family: Cinzel, serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -181,25 +186,7 @@ img {
   border-radius: var(--border-radius);
 }
 
-.reg-login__item {
-  margin-left: 20px;
-}
-
-.primary {
-  color: var(--pure-white);
-  background-color: var(--bg-color-button);
-  padding: 15px 30px;
-  border: 2px solid var(--bg-color-button);
-  border-color: transparent;
-}
-
-.secondary {
-  color: var(--link-color);
-  padding: 15px 65px;
-  border: 2px solid var(--bg-color-button);
-}
-
-.form__button {
+.reg-login__button {
   position: relative;
   display: block;
   padding: 0;
@@ -211,14 +198,14 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  color: #eea91e;
+  color: var(--pure-white);
   border: none;
   border-radius: var(--border-radius);
   z-index: 10;
   overflow: hidden;
   cursor: pointer;
 }
-.form__button::after, .form__button::before {
+.reg-login__button::after, .reg-login__button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -227,7 +214,7 @@ img {
           transform: translate(-50%, -50%);
   display: block;
 }
-.form__button::before {
+.reg-login__button::before {
   width: 100%;
   height: 100%;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(-2%, #00c5eb), color-stop(90%, #057198));
@@ -235,7 +222,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.form__button::after {
+.reg-login__button::after {
   width: calc(100% - 2px);
   height: calc(100% - 2px);
   border-radius: var(--border-radius);
@@ -244,18 +231,39 @@ img {
   -webkit-transition: 250ms;
   transition: 250ms;
 }
-.form__button__text {
+.reg-login__button__text {
   position: relative;
   z-index: 10;
 }
 @media screen and (min-width: 1280px) {
-  .form__button:hover::after, .form__button:focus::after {
+  .reg-login__button:hover::after, .reg-login__button:focus::after {
     opacity: 1;
   }
 }
 
-.form__button--margin {
+.reg-login__button:hover,
+.reg-login__button:focus {
+  color: var(--link-color);
+}
+
+.reg-login__button--margin {
   margin-left: 22px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .contacts {
@@ -277,13 +285,25 @@ img {
   margin-bottom: 18px;
 }
 
-.contacts-item {
-  margin-top: 13px;
+.contacts__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+}
+@media screen and (min-width: 768px) {
+  .contacts__title {
+    font-size: 20px;
+    line-height: 1.18;
+  }
 }
 
-.contacts__title {
+.contacts--title {
   margin-bottom: 25px;
   padding: 0 19px;
+}
+
+.contacts-item {
+  margin-top: 13px;
 }
 
 .contacts_social {
@@ -330,7 +350,7 @@ img {
   color: var(--link-color);
 }
 
-.form__button--margin-footer {
+.reg-login__button--margin-footer {
   margin-top: 22px;
 }
 
@@ -342,14 +362,14 @@ img {
 
 .footer__text {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.21;
   color: var(--pure-white);
 }
 
 .logo {
   margin-left: 10px;
-  font-family: Raleway, sans-serif;
+  font-family: Cinzel, serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 1.2;
@@ -357,12 +377,21 @@ img {
 }
 .logo--head {
   color: #071d66;
-  margin-left: 3px;
+  margin-left: 0;
 }
 .logo--footer {
   color: var(--pure-white);
+  margin-left: 0;
 }
 
 .logo-reset {
   margin-left: 0;
+}
+
+.point {
+  font-family: Cinzel, serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.2;
+  color: #eea91e;
 }/*# sourceMappingURL=main.css.map */
