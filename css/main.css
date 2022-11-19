@@ -3,7 +3,6 @@
   --primary-text-color: #2a2a2a;
   --link-color: #057198;
   --bg-color: #f5f4fa;
-  --bg-color-button: #057198;
   --icon-color: #afb1b8;
   --buttons-gradient: linear-gradient(90.03deg, #00c5eb -1.97%, #057198 89.43%);
   --border-radius: 4px;
@@ -83,12 +82,15 @@ img {
 }
 @media screen and (min-width: 1500px) {
   .container {
+    padding-left: 16px;
+    padding-right: 16px;
     max-width: 1500px;
   }
 }
 
 .section {
-  padding: 22px 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
 .header {
@@ -264,6 +266,27 @@ img {
     font-size: 44px;
     line-height: 1.36;
   }
+}
+
+.licence > p,
+.licence > h2 {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.licence > h2 {
+  margin: 25px 0;
+}
+
+.licence a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.licence li {
+  list-style: disc;
+  margin-bottom: 10px;
+  margin-left: 34px;
 }
 
 .contacts {
