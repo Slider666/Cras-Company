@@ -324,6 +324,7 @@ img {
 }
 
 .contacts__title {
+  color: var(--link-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.21;
@@ -355,6 +356,25 @@ img {
 
 .contacts__item {
   margin-top: 13px;
+}
+
+.contacts__link {
+  color: var(--pure-white);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--link-color);
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: var(--pure-white);
+  -webkit-transition: fill 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
+}
+.contacts__link:hover > .contacts__icon, .contacts__link:focus > .contacts__icon {
+  fill: var(--link-color);
 }
 
 .contacts_social {
@@ -390,27 +410,6 @@ img {
   .socials-link:hover .social-icon .social-icon__hover {
     opacity: 1;
   }
-}
-
-.contacts__link {
-  color: var(--pure-white);
-  -webkit-transition: color 250ms var(--timing-function);
-  transition: color 250ms var(--timing-function);
-}
-.contacts__link:hover, .contacts__link:focus {
-  color: var(--link-color);
-}
-
-.contacts__icon {
-  margin-right: 8px;
-  fill: var(--pure-white);
-  -webkit-transition: -webkit-transform 250ms var(--timing-function);
-  transition: -webkit-transform 250ms var(--timing-function);
-  transition: transform 250ms var(--timing-function);
-  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
-}
-.contacts__link:hover > .contacts__icon, .contacts__link:focus > .contacts__icon {
-  fill: var(--link-color);
 }
 
 .reg-login__button--margin-footer {
