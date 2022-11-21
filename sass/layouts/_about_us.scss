@@ -1,0 +1,41 @@
+.about-us--reset {
+  margin-bottom: 0;
+}
+
+.about-us p {
+  margin-bottom: 10px;
+
+  text-align: justify;
+}
+
+.about-us__title {
+  margin: 25px 0;
+}
+
+.about-us--flex {
+  display: flex;
+  align-items: center;
+}
+
+.about-us__slogan {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-us__item {
+  list-style: disc;
+
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+.about-us__edge li {
+  list-style: disc;
+
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+.about-us--margin {
+  margin-top: 40px;
+}

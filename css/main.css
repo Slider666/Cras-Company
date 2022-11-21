@@ -266,44 +266,6 @@ img {
   }
 }
 
-.licence > p,
-.licence > h2 {
-  margin-bottom: 10px;
-  text-align: justify;
-}
-
-.licence > h2 {
-  margin: 25px 0;
-}
-
-.licence a {
-  color: var(--link-color);
-  text-decoration: underline;
-  font-family: Cinzel, serif;
-}
-
-.licence li {
-  list-style: disc;
-  margin-bottom: 10px;
-  margin-left: 34px;
-}
-
-.licence-margin {
-  margin-top: 30px;
-}
-
-.unselectable {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Chrome/Safari/Opera */ /* Konqueror */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently */
-}
-
-.cras-company {
-  font-family: Cinzel, serif;
-}
-
 .contacts {
   color: var(--pure-white);
   background-color: #06071b;
@@ -341,24 +303,17 @@ img {
   padding: 0 19px;
 }
 
-.contacts__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 .contacts__item {
   margin-top: 13px;
 }
 
 .contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--pure-white);
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
@@ -427,6 +382,87 @@ img {
   font-size: 16px;
   line-height: 1.21;
   color: var(--pure-white);
+}
+
+.licence > p,
+.licence > h2 {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.licence > h2 {
+  margin: 25px 0;
+}
+
+.licence a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-family: Cinzel, serif;
+}
+
+.licence li {
+  list-style: disc;
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+.licence-margin {
+  margin-top: 30px;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */ /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+.cras-company {
+  font-family: Cinzel, serif;
+}
+
+.about-us--reset {
+  margin-bottom: 0;
+}
+
+.about-us p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.about-us__title {
+  margin: 25px 0;
+}
+
+.about-us--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us__slogan {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-us__item {
+  list-style: disc;
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+.about-us__edge li {
+  list-style: disc;
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+.about-us--margin {
+  margin-top: 40px;
 }
 
 .logo {
