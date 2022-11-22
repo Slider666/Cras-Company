@@ -274,24 +274,59 @@ img {
 
 .filter {
   margin-right: 30px;
+  min-width: 270px;
+}
+
+.filter__icon-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter__icon {
+  margin-right: 10px;
 }
 
 .filter__title,
+.filter-icon-title__title,
 .shop__title {
-  margin-bottom: 20px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.14;
+}
+
+.filter__title {
+  margin-bottom: 20px;
 }
 
 .filter__list {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.14;
 }
 
-.filter__list > li {
-  margin: 10px 0;
+.filter__list > li,
+.filter__secondary-list > li {
+  margin: 10px 0 10px 33px;
+}
+
+.filter__list > li:first-child,
+.filter__secondary-list > li:first-child {
+  margin-top: 0;
+}
+
+.filter__secondary-list > li:last-child {
+  margin-bottom: 20px;
+}
+
+.filter-icon-title__secondary-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
 }
 
 .shop__title--position {
@@ -308,7 +343,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .shop-list__item {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
   }
 }
 .shop-list__item:last-child {
@@ -316,9 +351,9 @@ img {
 }
 @media screen and (min-width: 768px) {
   .shop-list__item {
-    width: calc((100% - 30px) / 2);
-    margin-right: 30px;
-    margin-bottom: 30px;
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
   .shop-list__item:nth-child(2n) {
     margin-right: 0;
@@ -329,10 +364,10 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .shop-list__item {
-    width: calc((100% - 60px) / 3);
+    width: calc((100% - 40px) / 3);
   }
   .shop-list__item:nth-child(2n) {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .shop-list__item:nth-child(3n) {
     margin-right: 0;
@@ -343,13 +378,13 @@ img {
 }
 @media screen and (min-width: 1500px) {
   .shop-list__item {
-    width: calc((100% - 90px) / 4);
+    width: calc((100% - 60px) / 4);
   }
   .shop-list__item:nth-child(2n) {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .shop-list__item:nth-child(3n) {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .shop-list__item:nth-child(4n) {
     margin-right: 0;
@@ -369,7 +404,7 @@ img {
           flex-direction: column;
   text-align: center;
   height: 100%;
-  padding: 0 20px 20px 20px;
+  padding: 0 15px 20px 15px;
   -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
   transition: -webkit-box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function);
