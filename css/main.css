@@ -266,6 +266,149 @@ img {
   }
 }
 
+.filter-shop--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter {
+  margin-right: 30px;
+}
+
+.filter__title,
+.shop__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.14;
+}
+
+.filter__list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.14;
+}
+
+.filter__list > li {
+  margin: 10px 0;
+}
+
+.shop__title--position {
+  text-align: end;
+}
+
+.shop__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px) {
+  .shop-list__item {
+    margin: 0 auto 30px auto;
+  }
+}
+.shop-list__item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .shop-list__item {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .shop-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .shop-list__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .shop-list__item {
+    width: calc((100% - 60px) / 3);
+  }
+  .shop-list__item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .shop-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .shop-list__item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .shop-list__item {
+    width: calc((100% - 90px) / 4);
+  }
+  .shop-list__item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .shop-list__item:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .shop-list__item:nth-child(4n) {
+    margin-right: 0;
+  }
+  .shop-list__item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+  }
+}
+
+.work-list-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px 20px 20px;
+  -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
+  transition: -webkit-box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+}
+.work-list-item__link:hover, .work-list-item__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.work-list-item__img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-list-item__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+
+.work-list-item__text {
+  font-size: 14px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #071d66;
+}
+@media screen and (min-width: 480px) {
+  .work-list-item__text {
+    font-size: 18px;
+  }
+}
+
+.work-list__button--margin {
+  margin-top: 20px;
+}
+
 .contacts {
   color: var(--pure-white);
   background-color: #06071b;
@@ -384,6 +527,12 @@ img {
   color: var(--pure-white);
 }
 
+.licence {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.14;
+}
+
 .licence > p,
 .licence > h2 {
   margin-bottom: 10px;
@@ -392,6 +541,9 @@ img {
 
 .licence > h2 {
   margin: 25px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.14;
 }
 
 .licence a {
@@ -422,17 +574,10 @@ img {
   font-family: Cinzel, serif;
 }
 
-.about-us--reset {
-  margin-bottom: 0;
-}
-
-.about-us p {
-  margin-bottom: 10px;
-  text-align: justify;
-}
-
-.about-us__title {
-  margin: 25px 0;
+.about-us {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.14;
 }
 
 .about-us--flex {
@@ -442,6 +587,22 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.about-us__title {
+  margin: 25px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.14;
+}
+
+.about-us--reset {
+  margin-bottom: 0;
+}
+
+.about-us p {
+  margin-bottom: 10px;
+  text-align: justify;
 }
 
 .about-us__slogan {
