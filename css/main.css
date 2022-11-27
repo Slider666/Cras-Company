@@ -277,8 +277,36 @@ img {
   min-width: 270px;
 }
 
+.filter__form {
+  margin-bottom: 20px;
+}
+
+.filter__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.filter__search input {
+  padding: 0 13px;
+  border: 2px solid var(--link-color);
+  border-radius: var(--border-radius);
+}
+
+.filter__button {
+  padding: 0;
+  margin-left: 10px;
+  border-style: none;
+  background-color: var(--pure-white);
+  cursor: pointer;
+}
+
 .filter__menu {
   position: relative;
+  margin-bottom: 5px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .filter__icon-title {
@@ -288,11 +316,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
 }
 
 .filter__icon,
-.filter__icon-secondary {
+.filter__icon-open,
+.filter__icon-secondary,
+.filter__icon-secondary-open {
   margin-right: 10px;
 }
 
@@ -302,13 +331,14 @@ img {
   opacity: 0;
 }
 
-.icon--position {
-  left: 30px;
+.icon--position-cofee {
+  top: 291px;
+  left: 29.5px;
 }
 
-.icon--position-cofee {
-  top: 216px;
-  left: 32px;
+.icon--position-wash {
+  top: -12px;
+  left: 28px;
 }
 
 .filter__title,
@@ -319,16 +349,26 @@ img {
   line-height: 1.14;
 }
 
-.filter__title {
-  margin-bottom: 20px;
-}
-
 .filter__list,
 .filter__secondary-list {
   display: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.filter__list > li,
+.filter__secondary-list > li {
+  margin-left: 15px;
+  padding: 10px;
+}
+
+.filter__list > li:last-child {
+  margin-bottom: -5px;
+}
+
+.filter__secondary-list--margin {
+  margin-top: 20px;
 }
 
 .filter__menu:hover .filter__icon,
@@ -352,24 +392,14 @@ img {
   display: block;
 }
 
-.filter__list > li,
-.filter__secondary-list > li {
-  margin: 10px 0 10px 33px;
-}
-
-.filter__list > li:first-child,
-.filter__secondary-list > li:first-child {
-  margin-top: 0;
-}
-
-.filter__secondary-list > li:last-child {
-  margin-bottom: 20px;
-}
-
 .filter-icon-title__secondary-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.filter__title {
+  margin-bottom: 20px;
 }
 
 .shop__title--position {
