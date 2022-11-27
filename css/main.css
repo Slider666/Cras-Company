@@ -277,6 +277,10 @@ img {
   min-width: 270px;
 }
 
+.filter__menu {
+  position: relative;
+}
+
 .filter__icon-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,8 +291,24 @@ img {
   margin-bottom: 20px;
 }
 
-.filter__icon {
+.filter__icon,
+.filter__icon-secondary {
   margin-right: 10px;
+}
+
+.filter__icon-open,
+.filter__icon-secondary-open {
+  position: absolute;
+  opacity: 0;
+}
+
+.icon--position {
+  left: 30px;
+}
+
+.icon--position-cofee {
+  top: 216px;
+  left: 32px;
 }
 
 .filter__title,
@@ -303,23 +323,33 @@ img {
   margin-bottom: 20px;
 }
 
-.filter__list {
+.filter__list,
+.filter__secondary-list {
   display: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
 }
 
-.filter__menu:hover .filter__list {
-  display: block;
+.filter__menu:hover .filter__icon,
+.filter__menu:focus .filter__icon,
+.filter__secondary-menu:hover .filter__icon-secondary,
+.filter__secondary-menu:focus .filter__icon-secondary {
+  opacity: 0;
 }
 
-.filter__secondary-menu:hover .filter__secondary-list {
-  display: block;
+.filter__menu:hover .filter__icon-open,
+.filter__menu:focus .filter__icon-open,
+.filter__secondary-menu:hover .filter__icon-secondary-open,
+.filter__secondary-menu:focus .filter__icon-secondary-open {
+  opacity: 1;
 }
 
-.filter__secondary-list {
-  display: none;
+.filter__menu:hover .filter__list,
+.filter__menu:focus .filter__list,
+.filter__secondary-menu:hover .filter__secondary-list,
+.filter__secondary-menu:focus .filter__secondary-list {
+  display: block;
 }
 
 .filter__list > li,
