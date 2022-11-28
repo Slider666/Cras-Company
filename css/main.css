@@ -331,6 +331,8 @@ img {
   margin-bottom: 5px;
   padding: 5px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .filter__icon-title-box {
@@ -375,10 +377,16 @@ img {
 
 .filter__list,
 .filter__secondary-list {
-  display: none;
+  position: absolute;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 .filter__list > li,
@@ -413,7 +421,9 @@ img {
 .filter__menu:focus .filter__list,
 .filter__secondary-menu:hover .filter__secondary-list,
 .filter__secondary-menu:focus .filter__secondary-list {
-  display: block;
+  position: relative;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .filter-icon-title__secondary-title {
