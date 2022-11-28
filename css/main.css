@@ -290,8 +290,29 @@ img {
 
 .filter__search input {
   padding: 0 13px;
+  width: 220px;
   border: 2px solid var(--link-color);
   border-radius: var(--border-radius);
+}
+
+.filter__search input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.filter__search input::-moz-placeholder {
+  font-size: 14px;
+}
+
+.filter__search input:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.filter__search input::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.filter__search input::placeholder {
+  font-size: 14px;
 }
 
 .filter__button {
@@ -302,14 +323,17 @@ img {
   cursor: pointer;
 }
 
-.filter__menu {
+.filter__main-list {
   position: relative;
+}
+
+.filter__menu {
   margin-bottom: 5px;
   padding: 5px;
   cursor: pointer;
 }
 
-.filter__icon-title {
+.filter__icon-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,13 +356,13 @@ img {
 }
 
 .icon--position-cofee {
-  top: 291px;
-  left: 29.5px;
+  -webkit-transform: translate(-0.5px, -0.5px);
+          transform: translate(-0.5px, -0.5px);
 }
 
 .icon--position-wash {
-  top: -12px;
-  left: 28px;
+  -webkit-transform: translate(-2.5px, 0.3px);
+          transform: translate(-2.5px, 0.3px);
 }
 
 .filter__title,
