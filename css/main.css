@@ -323,15 +323,11 @@ img {
   cursor: pointer;
 }
 
-.filter__main-list {
-  position: relative;
-  background-color: var(--pure-white);
-}
-
 .filter__menu {
   margin-bottom: 5px;
   cursor: pointer;
   position: relative;
+  z-index: 50;
   overflow: hidden;
 }
 
@@ -343,31 +339,24 @@ img {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 20;
+  z-index: 40;
   background-color: var(--pure-white);
 }
 
-.filter__icon,
-.filter__icon-open,
-.filter__icon-secondary,
-.filter__icon-secondary-open {
-  margin-right: 10px;
+.filter__secondary-icon-title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 100;
+  background-color: var(--pure-white);
 }
 
-.filter__icon-open,
-.filter__icon-secondary-open {
-  position: absolute;
-  opacity: 0;
-}
-
-.icon--position-cofee {
-  -webkit-transform: translate(-0.5px, -0.5px);
-          transform: translate(-0.5px, -0.5px);
-}
-
-.icon--position-wash {
-  -webkit-transform: translate(-2.5px, 0.3px);
-          transform: translate(-2.5px, 0.3px);
+.--margin {
+  margin-left: 10px;
 }
 
 .filter__title,
@@ -390,10 +379,21 @@ img {
   transition: -webkit-transform 1000ms var(--timing-function);
   transition: transform 1000ms var(--timing-function);
   transition: transform 1000ms var(--timing-function), -webkit-transform 1000ms var(--timing-function);
-  z-index: 1;
+  background-color: var(--pure-white);
 }
 
-.filter__list > li,
+.filter__secondary-menu {
+  margin-left: 15px;
+}
+
+.filter-list__item {
+  margin-left: 15px;
+  padding: 10px;
+  position: relative;
+  z-index: 20;
+  background-color: var(--pure-white);
+}
+
 .filter__secondary-list > li {
   margin-left: 15px;
   padding: 10px;
@@ -403,8 +403,27 @@ img {
   margin-bottom: -5px;
 }
 
-.filter__secondary-list--margin {
-  margin-top: 20px;
+.filter__icon,
+.filter__icon-open,
+.filter__icon-secondary,
+.filter__icon-secondary-open {
+  margin-right: 10px;
+}
+
+.filter__icon-open,
+.filter__icon-secondary-open {
+  position: absolute;
+  opacity: 0;
+}
+
+.icon--position-cofee {
+  -webkit-transform: translate(-0.5px, -0.5px);
+          transform: translate(-0.5px, -0.5px);
+}
+
+.icon--position-wash {
+  -webkit-transform: translate(1px, 0.3px);
+          transform: translate(1px, 0.3px);
 }
 
 .filter__menu:hover .filter__icon,
