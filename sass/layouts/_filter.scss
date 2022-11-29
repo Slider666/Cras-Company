@@ -51,11 +51,12 @@
 
 .filter__main-list {
   position: relative;
+
+  background-color: var(--pure-white);
 }
 
 .filter__menu {
   margin-bottom: 5px;
-  padding: 5px;
 
   cursor: pointer;
   position: relative;
@@ -65,6 +66,10 @@
 .filter__icon-title-box {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 20;
+
+  background-color: var(--pure-white);
 }
 
 .filter__icon,
@@ -99,8 +104,6 @@
 
 .filter__list,
 .filter__secondary-list {
-  // display: none;
-
   position: absolute;
 
   font-weight: 400;
@@ -108,7 +111,9 @@
   line-height: 1.14;
 
   transform: translateY(-150%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform 1000ms var(--timing-function);
+
+  z-index: 1;
 }
 
 .filter__list > li,
@@ -143,9 +148,8 @@
 .filter__menu:focus .filter__list,
 .filter__secondary-menu:hover .filter__secondary-list,
 .filter__secondary-menu:focus .filter__secondary-list {
-  // display: block;
-  position: relative;
   transform: translateY(0);
+  position: relative;
 }
 
 .filter-icon-title__secondary-title {
