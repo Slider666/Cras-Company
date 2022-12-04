@@ -324,7 +324,6 @@ img {
 }
 
 .filter__menu {
-  margin-bottom: 5px;
   cursor: pointer;
   position: relative;
   z-index: 50;
@@ -338,6 +337,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 10px;
   position: relative;
   z-index: 40;
   background-color: var(--pure-white);
@@ -382,10 +382,6 @@ img {
   background-color: var(--pure-white);
 }
 
-.filter__list--margin {
-  margin-top: 10px;
-}
-
 .filter__secondary-menu {
   margin-left: 15px;
 }
@@ -396,15 +392,37 @@ img {
   position: relative;
   z-index: 20;
   background-color: var(--pure-white);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+}
+
+.filter-list__item--padding {
+  padding-bottom: 30px;
 }
 
 .filter__secondary-list > li {
   margin-left: 15px;
   padding: 10px;
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 .filter__list > li:last-child {
   margin-bottom: -5px;
+}
+
+.filter-list__item:hover,
+.filter-list__item:focus,
+.filter__secondary-list > li:hover,
+.filter__secondary-list > li:focus {
+  color: var(--link-color);
+  font-weight: 700;
+  -webkit-transform: translateX(13px);
+          transform: translateX(13px);
 }
 
 .filter__icon,
