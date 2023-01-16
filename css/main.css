@@ -448,24 +448,20 @@ img {
           transform: translate(1px, 0.3px);
 }
 
-.filter__menu:hover .filter__icon,
-.filter__menu:focus .filter__icon,
-.filter__secondary-menu:hover .filter__icon-secondary,
-.filter__secondary-menu:focus .filter__icon-secondary {
+.icon--position-gigiena {
+  -webkit-transform: translate(-0.5px, -0.1px);
+          transform: translate(-0.5px, -0.1px);
+}
+
+.js-icon-close {
   opacity: 0;
 }
 
-.filter__menu:hover .filter__icon-open,
-.filter__menu:focus .filter__icon-open,
-.filter__secondary-menu:hover .filter__icon-secondary-open,
-.filter__secondary-menu:focus .filter__icon-secondary-open {
+.js-icon-open {
   opacity: 1;
 }
 
-.filter__menu:hover .filter__list,
-.filter__menu:focus .filter__list,
-.filter__secondary-menu:hover .filter__secondary-list,
-.filter__secondary-menu:focus .filter__secondary-list {
+.js-filter-list-open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   position: relative;
