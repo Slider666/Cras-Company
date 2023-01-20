@@ -8,7 +8,14 @@ firstNameInput.oninput = () => {
   if (firstNameInput.value === "") {
     firstNameOutput.innerHTML = " Antonio";
   } else {
-    firstNameOutput.innerHTML = firstNameInput.value;
+    const arrayOfFirstName = firstNameInput.value.split("");
+    const normalizedFirstName =
+      arrayOfFirstName[0].toUpperCase() +
+      arrayOfFirstName
+        .splice(1, arrayOfFirstName.length)
+        .join("")
+        .toLowerCase();
+    firstNameOutput.innerHTML = normalizedFirstName;
   }
 };
 
@@ -16,6 +23,10 @@ lastNameInput.oninput = () => {
   if (lastNameInput.value === "") {
     lastNameOutput.innerHTML = " Banderas";
   } else {
-    lastNameOutput.innerHTML = lastNameInput.value;
+    const arrayOfLastName = lastNameInput.value.split("");
+    const normalizedLastName =
+      arrayOfLastName[0].toUpperCase() +
+      arrayOfLastName.splice(1, arrayOfLastName.length).join("").toLowerCase();
+    lastNameOutput.innerHTML = normalizedLastName;
   }
 };
