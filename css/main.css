@@ -1090,5 +1090,6 @@ img {
 .modal__license-link {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  text-underline-offset: 5px;
   color: var(--link-color);
 }/*# sourceMappingURL=main.css.map */
