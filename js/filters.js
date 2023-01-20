@@ -1,4 +1,17 @@
 // ===========================================================================
+// Поиск в фильтре
+// ===========================================================================
+
+const inputSearch = document.querySelector("#search");
+
+inputSearch.addEventListener("input", _.debounce(searchChangeHandler, 1500));
+
+function searchChangeHandler(event) {
+  const searchItem = event.target.value.toLowerCase();
+  console.log(searchItem);
+}
+
+// ===========================================================================
 // Продукти харчування
 // ===========================================================================
 const filterMenuFood = document.querySelector(".js-filter__menu-food");
