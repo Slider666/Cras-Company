@@ -1,14 +1,80 @@
 // ===========================================================================
-// Поиск в фильтре
+// Динамическая разметка
 // ===========================================================================
 
+import { shopLots } from "./test-array01.js";
+
+const shopList = document.querySelector(".js-shop__list");
+
+function createListItemsMarkup(items) {
+  return items
+    .map(
+      ({ url, alt, priceGRN, priceUSDT, nameUKR, nameEN }) =>
+        `<li class="shop-list__item">
+        <div class="shop-list__position">
+          <a class="work-list-item__link" href="">
+            <img
+              class="work-list-item__img"
+              src="${url}"
+              alt="${alt}"
+              width="200"
+              height="256"
+              loading="lazy"
+            />
+
+            <h2 class="work-list-item__title">
+              ${priceGRN} ГРН – ${priceUSDT} USDT
+            </h2>
+
+            <p class="work-list-item__text">
+              ${nameUKR} &#171;${nameEN}&#187;
+            </p>
+          </a>
+
+          <button class="reg-login__button work-list__button--position" type="submit">
+            <span class="reg-login__button__text">У кошик</span>
+          </button>
+        </div>
+      </li>`
+    )
+    .join("");
+}
+
+const listItemMarkup = createListItemsMarkup(shopLots);
+
+shopList.innerHTML = listItemMarkup;
+
+// ===========================================================================
+// Анимация Lazy-loading
+// ===========================================================================
+
+const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+lazyImages.forEach((image) => {
+  image.addEventListener("load", onImageLoaded);
+});
+
+function onImageLoaded(event) {
+  event.target.classList.add("appear");
+}
+
+// ===========================================================================
+// Поиск в фильтре
+// ===========================================================================
 const inputSearch = document.querySelector("#search");
 
 inputSearch.addEventListener("input", _.debounce(searchChangeHandler, 1500));
 
 function searchChangeHandler(event) {
   const searchItem = event.target.value.toLowerCase();
-  console.log(searchItem);
+
+  const filteredIitems = shopLots.filter((_shopLot) =>
+    _shopLot.nameEN.toLowerCase().includes(searchItem)
+  );
+
+  const listImtemsMarkup = createListItemsMarkup(filteredIitems);
+
+  shopList.innerHTML = listImtemsMarkup;
 }
 
 // ===========================================================================

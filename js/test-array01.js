@@ -5,7 +5,7 @@ export const shopLots = [
     priceGRN: 50,
     priceUSDT: 2.48,
     nameUKR: "В'ялені помідори",
-    nameEN: "&#171;Sottile Gusto Pomidory Suszone&#187;",
+    nameEN: "Sottile Gusto Pomidory Suszone",
   },
   {
     url: "./images/shop-images/Паста_для_миття_рук_«Power_Wash_Hand_Washing_Cream».jpg",
@@ -13,7 +13,7 @@ export const shopLots = [
     priceGRN: 108,
     priceUSDT: 5.22,
     nameUKR: "Паста для миття рук",
-    nameEN: "&#171;Power Wash Hand Washing Cream&#187;",
+    nameEN: "Power Wash Hand Washing Cream",
   },
   {
     url: "./images/shop-images/Гель_для_прання_«Ariel_Fresh_Sensations».jpg",
@@ -21,7 +21,7 @@ export const shopLots = [
     priceGRN: 195,
     priceUSDT: 9.33,
     nameUKR: "Гель для прання",
-    nameEN: "&#171;Ariel Fresh Sensations&#187;",
+    nameEN: "Ariel Fresh Sensations",
   },
   {
     url: "./images/shop-images/Оливкова_олія_(каністра)_«Olio_Extra_Vergine_Di_Oliva».jpg",
@@ -29,7 +29,7 @@ export const shopLots = [
     priceGRN: 76,
     priceUSDT: 3.71,
     nameUKR: "Оливкова олія (каністра)",
-    nameEN: "&#171;Olio Extra Vergine Di Oliva&#187;",
+    nameEN: "Olio Extra Vergine Di Oliva",
   },
   {
     url: "./images/shop-images/Плямовивідник_«Vanish_Oxi_Action».jpg",
@@ -37,7 +37,7 @@ export const shopLots = [
     priceGRN: 50,
     priceUSDT: 2.48,
     nameUKR: "Плямовивідник",
-    nameEN: "&#171;Vanish Oxi Action&#187;",
+    nameEN: "Vanish Oxi Action",
   },
   {
     url: "./images/shop-images/Соус_«Univer_Erős_Pista».jpg",
@@ -45,7 +45,7 @@ export const shopLots = [
     priceGRN: 39,
     priceUSDT: 1.95,
     nameUKR: "Соус",
-    nameEN: "&#171;Univer Erős Pista&#187;",
+    nameEN: "Univer Erős Pista",
   },
   {
     url: "./images/shop-images/Засіб_для_дезінфекції_«Astonish_Germ_Clean_Disinfectant».jpg",
@@ -53,7 +53,7 @@ export const shopLots = [
     priceGRN: 53,
     priceUSDT: 2.62,
     nameUKR: "Засіб для дезінфекції",
-    nameEN: "&#171;Astonish Germ Clean Disinfectant&#187;",
+    nameEN: "Astonish Germ Clean Disinfectant",
   },
   {
     url: "./images/shop-images/Кукурудзяні_пластівці_«Smako_Corn_Flakes».jpg",
@@ -61,7 +61,7 @@ export const shopLots = [
     priceGRN: 37,
     priceUSDT: 1.86,
     nameUKR: "Кукурудзяні пластівці",
-    nameEN: "&#171;Smako Corn Flakes&#187;",
+    nameEN: "Smako Corn Flakes",
   },
   {
     url: "./images/shop-images/Сіль_для_посудомийної_машини_«Denk_mit_Spezialsalz».jpg",
@@ -69,7 +69,7 @@ export const shopLots = [
     priceGRN: 53,
     priceUSDT: 2.62,
     nameUKR: "Сіль для посудомийної машини",
-    nameEN: "&#171;Denk mit Spezialsalz&#187;",
+    nameEN: "Denk mit Spezialsalz",
   },
   {
     url: "./images/shop-images/Сосиски_«Yano_Hot_Dog».jpg",
@@ -77,7 +77,7 @@ export const shopLots = [
     priceGRN: 60,
     priceUSDT: 2.95,
     nameUKR: "Сосиски",
-    nameEN: "&#171;Yano Hot Dog&#187;",
+    nameEN: "Yano Hot Dog",
   },
   {
     url: "./images/shop-images/Капсули_для_прання_«Dash_all_in_1_PODS».jpg",
@@ -85,7 +85,7 @@ export const shopLots = [
     priceGRN: 242,
     priceUSDT: 11.55,
     nameUKR: "Капсули для прання",
-    nameEN: "&#171;Dash all in 1 PODS&#187;",
+    nameEN: "Dash all in 1 PODS",
   },
   {
     url: "./images/shop-images/Макарони_«Barilla_Fusilli_n.98».jpg",
@@ -93,6 +93,6 @@ export const shopLots = [
     priceGRN: 36,
     priceUSDT: 1.82,
     nameUKR: "Макарони",
-    nameEN: "&#171;Barilla Fusilli n.98&#187;",
+    nameEN: "Barilla Fusilli n.98",
   },
 ];

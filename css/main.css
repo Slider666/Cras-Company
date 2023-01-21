@@ -605,24 +605,6 @@ img {
   bottom: 0;
 }
 
-.shop__list .work-list-item__img {
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  opacity: 0;
-  -webkit-transition: all 500ms linear;
-  transition: all 500ms linear;
-  width: 200px;
-  height: 256px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.shop__list .work-list-item__img.appear {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-}
-
 .contacts {
   color: var(--pure-white);
   background-color: #06071b;
