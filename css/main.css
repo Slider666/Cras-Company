@@ -473,6 +473,10 @@ img {
   margin-bottom: 20px;
 }
 
+.shop__title {
+  margin-bottom: 30px;
+}
+
 .shop__title--position {
   text-align: end;
 }
@@ -588,8 +592,17 @@ img {
   }
 }
 
-.work-list__button--margin {
-  margin-top: 20px;
+.shop-list__position {
+  position: relative;
+  height: 438.25px;
+}
+
+.work-list__button--position {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
 }
 
 .shop__list .work-list-item__img {
