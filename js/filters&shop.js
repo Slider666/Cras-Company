@@ -14,12 +14,11 @@ function createListItemsMarkup(items) {
         <div class="shop-list__position">
           <a class="work-list-item__link" href="">
             <img
-              class="work-list-item__img"
-              src="${url}"
+              class="lazyload work-list-item__img"
+              data-src="${url}"
               alt="${alt}"
               width="200"
               height="256"
-              loading="lazy"
             />
 
             <h2 class="work-list-item__title">
@@ -48,7 +47,9 @@ shopList.innerHTML = listItemMarkup;
 // Анимация Lazy-loading
 // ===========================================================================
 
-const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+const lazyImages = document.querySelectorAll(
+  'img[class="lazyload work-list-item__img"]'
+);
 
 lazyImages.forEach((image) => {
   image.addEventListener("load", onImageLoaded);

@@ -133,16 +133,16 @@
 // Анимация
 // ----------------------------------------
 
-// .shop__list .work-list-item__img {
-//   transform: translateY(50%);
-//   opacity: 0;
-//   transition: all 500ms linear;
-//   width: 200px;
-//   height: 256px;
-//   object-fit: cover;
-// }
+.shop__list .work-list-item__img {
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all 1000ms linear 500ms;
+  width: 200px;
+  height: 256px;
+  object-fit: cover;
+}
 
-// .shop__list .work-list-item__img.appear {
-//   transform: translateY(0);
-//   opacity: 1;
-// }
+.shop__list .work-list-item__img.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
