@@ -11,30 +11,30 @@ function createListItemsMarkup(items) {
     .map(
       ({ url, alt, priceGRN, priceUSDT, nameUKR, nameEN }) =>
         `<li class="shop-list__item">
-        <div class="shop-list__position">
-          <a class="work-list-item__link" href="">
-            <img
-              class="lazyload work-list-item__img"
-              data-src="${url}"
-              alt="${alt}"
-              width="200"
-              height="256"
-            />
+          <div class="shop-list__position">
+            <a class="work-list-item__link" href="">
+              <img
+                class="lazyload work-list-item__img"
+                data-src="${url}"
+                alt="${alt}"
+                width="200"
+                height="256"
+              />
 
-            <h2 class="work-list-item__title">
-              ${priceGRN} ГРН – ${priceUSDT} USDT
-            </h2>
+              <h2 class="work-list-item__title">
+                ${priceGRN} ГРН – ${priceUSDT} USDT
+              </h2>
 
-            <p class="work-list-item__text">
-              ${nameUKR} &#171;${nameEN}&#187;
-            </p>
-          </a>
+              <p class="work-list-item__text">
+                ${nameUKR} &#171;${nameEN}&#187;
+              </p>
+            </a>
 
-          <button class="reg-login__button work-list__button--position" type="submit">
-            <span class="reg-login__button__text">У кошик</span>
-          </button>
-        </div>
-      </li>`
+            <button class="reg-login__button work-list__button--position" type="submit">
+              <span class="reg-login__button__text">У кошик</span>
+            </button>
+          </div>
+        </li>`
     )
     .join("");
 }
@@ -52,30 +52,46 @@ const lazyImages = document.querySelectorAll(
 );
 
 lazyImages.forEach((image) => {
-  image.addEventListener("load", onImageLoaded);
+  image.addEventListener("load", function () {
+    image.classList.add("appear");
+  });
 });
-
-function onImageLoaded(event) {
-  event.target.classList.add("appear");
-}
 
 // ===========================================================================
 // Поиск в фильтре
 // ===========================================================================
 const inputSearch = document.querySelector("#search");
 
+inputSearch.value = "";
+
 inputSearch.addEventListener("input", _.debounce(searchChangeHandler, 1500));
 
 function searchChangeHandler(event) {
   const searchItem = event.target.value.toLowerCase();
 
-  const filteredIitems = shopLots.filter((_shopLot) =>
-    _shopLot.nameEN.toLowerCase().includes(searchItem)
+  const filteredIitems = shopLots.filter(
+    (shopLot) =>
+      shopLot.nameEN.toLowerCase().includes(searchItem) ||
+      shopLot.nameUKR.toLowerCase().includes(searchItem)
   );
 
-  const listImtemsMarkup = createListItemsMarkup(filteredIitems);
+  const listItemsMarkup = createListItemsMarkup(filteredIitems);
 
-  shopList.innerHTML = listImtemsMarkup;
+  shopList.innerHTML = listItemsMarkup;
+
+  // ===========================================================================
+  // Анимация отфильтрованых изборажений
+  // ===========================================================================
+
+  const lazyImagesFiltered = document.querySelectorAll(
+    'img[class="lazyload work-list-item__img"]'
+  );
+
+  lazyImagesFiltered.forEach((image) => {
+    image.addEventListener("load", function () {
+      image.classList.add("appear");
+    });
+  });
 }
 
 // ===========================================================================
