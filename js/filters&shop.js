@@ -62,18 +62,30 @@ lazyImages.forEach((image) => {
 // ===========================================================================
 const inputSearch = document.querySelector("#search");
 
+const outputError = document.querySelector(".js-output-error");
+
 inputSearch.value = "";
 
 inputSearch.addEventListener("input", _.debounce(searchChangeHandler, 1500));
 
 function searchChangeHandler(event) {
-  const searchItem = event.target.value.toLowerCase();
+  const searchItem = event.target.value.trim().toLowerCase();
 
   const filteredIitems = shopLots.filter(
     (shopLot) =>
       shopLot.nameEN.toLowerCase().includes(searchItem) ||
       shopLot.nameUKR.toLowerCase().includes(searchItem)
   );
+
+  if (filteredIitems.length === 0) {
+    outputError.textContent = "Нажаль, такого товару у нас не має :(";
+    outputError.style.marginTop = "90px";
+    shopList.innerHTML = "";
+    return;
+  } else {
+    outputError.textContent = "";
+    outputError.style.marginTop = "0px";
+  }
 
   const listItemsMarkup = createListItemsMarkup(filteredIitems);
 

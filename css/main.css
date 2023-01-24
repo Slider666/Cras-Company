@@ -611,6 +611,15 @@ img {
   bottom: 0;
 }
 
+.output-error {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--link-color);
+  text-align: center;
+}
+
 .shop__list .work-list-item__img {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
