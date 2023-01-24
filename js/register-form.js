@@ -8,7 +8,7 @@ firstNameInput.oninput = () => {
   if (firstNameInput.value === "") {
     firstNameOutput.innerHTML = " Antonio";
   } else {
-    const arrayOfFirstName = firstNameInput.value.split("");
+    const arrayOfFirstName = firstNameInput.value.replace(/ /g, "").split("");
     const normalizedFirstName =
       arrayOfFirstName[0].toUpperCase() +
       arrayOfFirstName
@@ -23,7 +23,7 @@ lastNameInput.oninput = () => {
   if (lastNameInput.value === "") {
     lastNameOutput.innerHTML = " Banderas";
   } else {
-    const arrayOfLastName = lastNameInput.value.split("");
+    const arrayOfLastName = lastNameInput.value.replace(/ /g, "").split("");
     const normalizedLastName =
       arrayOfLastName[0].toUpperCase() +
       arrayOfLastName.splice(1, arrayOfLastName.length).join("").toLowerCase();

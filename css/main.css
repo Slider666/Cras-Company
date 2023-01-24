@@ -917,6 +917,31 @@ img {
   }
 }
 
+.modal__form input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal__form input::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal__form input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal__form input::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal__form input::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .modal__button-close {
   position: absolute;
   top: 3px;

@@ -40,3 +40,8 @@
     min-height: 581px;
   }
 }
+
+.modal__form input::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+}
