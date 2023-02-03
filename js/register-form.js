@@ -10,7 +10,7 @@ const lastNameOutput = document.querySelector("#last-name-output");
 
 firstNameInput.oninput = () => {
   if (firstNameInput.value === "") {
-    firstNameOutput.innerHTML = " Antonio";
+    firstNameOutput.innerHTML = " Тарас";
   } else {
     const arrayOfFirstName = firstNameInput.value.replace(/ /g, "").split("");
     const normalizedFirstName =
@@ -25,7 +25,7 @@ firstNameInput.oninput = () => {
 
 lastNameInput.oninput = () => {
   if (lastNameInput.value === "") {
-    lastNameOutput.innerHTML = " Banderas";
+    lastNameOutput.innerHTML = " Бульба";
   } else {
     const arrayOfLastName = lastNameInput.value.replace(/ /g, "").split("");
     const normalizedLastName =

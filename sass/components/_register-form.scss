@@ -19,7 +19,7 @@
   flex-direction: column;
 
   & input {
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 2px solid rgba(33, 33, 33, 0.2);
     border-radius: var(--border-radius);
 
     transition: border-color 250ms var(--timing-function);
@@ -74,6 +74,14 @@
   &:focus + .modal__icon,
   &:active + .modal__icon {
     fill: var(--link-color);
+  }
+
+  &:not(:placeholder-shown):required:valid {
+    border-color: yellowgreen;
+  }
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
   }
 }
 
