@@ -66,6 +66,12 @@
   transition: fill 250ms var(--timing-function);
 }
 
+.modal__icon--rigth{
+  top: 5px;
+  left:unset;
+  right: 12px;
+}
+
 .modal__input {
   padding-left: 42px;
   height: 40px;
@@ -131,9 +137,11 @@
 .modal__checkbox {
   position: absolute;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
+  opacity: 0;
+  transform: scale(0);
 }
 
 .modal__checkbox-icon {

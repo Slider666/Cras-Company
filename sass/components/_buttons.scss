@@ -74,6 +74,13 @@
   margin-left: 22px;
 }
 
+.work-list__button--position {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
 // .button {
 //   margin-left: auto;
 

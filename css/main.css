@@ -539,14 +539,6 @@ img {
   }
 }
 
-.work-list__button--position {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0;
-}
-
 .output-error {
   font-weight: 700;
   font-size: 36px;
@@ -951,6 +943,14 @@ img {
   margin-left: 22px;
 }
 
+.work-list__button--position {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+}
+
 .modal__button-close {
   position: absolute;
   top: 3px;
@@ -1144,6 +1144,12 @@ img {
   transition: fill 250ms var(--timing-function);
 }
 
+.modal__icon--rigth {
+  top: 5px;
+  left: unset;
+  right: 12px;
+}
+
 .modal__input {
   padding-left: 42px;
   height: 40px;
@@ -1221,9 +1227,9 @@ img {
 
 .modal__checkbox {
   position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .modal__checkbox-icon {
