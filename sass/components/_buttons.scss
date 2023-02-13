@@ -1,3 +1,19 @@
+.mobile-button {
+  padding: 0;
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--pure-white);
+
+  cursor: pointer;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
 .reg-login__button {
   position: relative;
   display: block;
@@ -56,8 +72,11 @@
     z-index: 10;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
 
+  @media screen and (min-width: 1024px) {
     &:hover::after,
     &:focus::after {
       opacity: 1;
@@ -71,7 +90,11 @@
 }
 
 .reg-login__button--margin {
-  margin-left: 22px;
+  margin-top: 10px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 0;
+    margin-left: 22px;
+  }
 }
 
 .work-list__button--position {
