@@ -31,7 +31,14 @@
   padding-bottom: 10px;
 
   @media screen and (min-width: 1024px) {
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
   }
+}
+
+.section--reset {
+  @media screen and (min-width: 1024px) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
 }

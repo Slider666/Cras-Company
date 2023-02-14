@@ -76,17 +76,25 @@
     display: none;
   }
 
-  @media screen and (min-width: 1024px) {
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
-    }
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
   }
 }
 
 .reg-login__button:hover,
 .reg-login__button:focus {
   color: var(--link-color);
+}
+
+.reg-login__footer {
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    display: flex;
+  }
+}
+
+.reg-login__button-footer {
+  display: block;
 }
 
 .reg-login__button--margin {
