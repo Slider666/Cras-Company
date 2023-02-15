@@ -1,3 +1,4 @@
+// Основное меню хедера
 .mobile-button {
   padding: 0;
   border: none;
@@ -14,6 +15,7 @@
   }
 }
 
+// Кнопка регистрации
 .reg-login__button {
   position: relative;
   display: block;
@@ -105,6 +107,50 @@
   }
 }
 
+// Кнопка поиска
+.filter__button {
+  padding: 0;
+  margin-left: 10px;
+
+  border-style: none;
+
+  background-color: var(--pure-white);
+
+  cursor: pointer;
+}
+
+.filter__button--mobile {
+  position: absolute;
+  border: 2px solid var(--pure-white);
+
+  padding: 3px;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid var(--link-color);
+    border-radius: var(--border-radius);
+
+    padding-bottom: 0;
+  }
+}
+
+.filter__button .icon-search-cross {
+  display: none;
+}
+
+.filter__button.is-open .icon-search-cross {
+  display: block;
+}
+
+.filter__button.is-open .icon-search-loupe {
+  display: none;
+}
+
+// Кнопка магазина
 .work-list__button--position {
   display: block;
   position: absolute;

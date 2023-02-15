@@ -1,4 +1,18 @@
 // ===========================================================================
+// Фильтр на мобилку
+// ===========================================================================
+
+const mobileSearchBtn = document.querySelector('[data-mobile-search-button]');
+
+mobileSearchBtn.addEventListener('click', () => {
+  const expanded = mobileSearchBtn.getAttribute('aria-expanded') === 'true' || 'false'
+
+  mobileSearchBtn.classList.toggle('is-open');
+
+  mobileSearchBtn.setAttribute('aria-expanded', !expanded);
+})
+
+// ===========================================================================
 // Динамическая разметка
 // ===========================================================================
 

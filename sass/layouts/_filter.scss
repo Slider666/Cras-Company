@@ -12,6 +12,12 @@
 // Форма поиска
 // ----------------------------------------
 
+.filter {
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
 .filter__form {
   margin-bottom: 20px;
 }
@@ -34,15 +40,8 @@
   font-size: 14px;
 }
 
-.filter__button {
-  padding: 0;
-  margin-left: 10px;
-
-  border-style: none;
-
-  background-color: var(--pure-white);
-
-  cursor: pointer;
+.filter__icon-search {
+  fill: var(--link-color);
 }
 
 // ----------------------------------------

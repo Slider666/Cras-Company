@@ -3,6 +3,8 @@
 // ----------------------------------------
 
 .shop {
+  position: relative;
+  
   @media screen and (min-width: 1500px) {
     min-width: 1168px;
   }

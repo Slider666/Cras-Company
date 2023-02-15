@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.nav {
+  position: relative;
+}
+
 .nav__list .nav__link--active {
   color: var(--link-color);
 }
@@ -26,12 +30,6 @@
 
   &:not(:last-child) {
     margin-right: 50px;
-  }
-}
-
-.nav__item--hidden {
-  @media screen and (max-width: 1023px) {
-    display: none;
   }
 }
 
