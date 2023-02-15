@@ -270,19 +270,29 @@ img {
 }
 
 .filter-shop--flex {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .filter {
+  display: none;
   margin-right: 30px;
   min-width: 270px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--pure-white);
 }
-
-@media screen and (max-width: 1023px) {
+.filter.is-open {
+  display: block;
+}
+@media screen and (min-width: 1024px) {
   .filter {
-    display: none;
+    position: relative;
   }
 }
 
@@ -326,6 +336,10 @@ img {
 
 .filter__icon-search {
   fill: var(--link-color);
+}
+
+.filter__main-menu {
+  position: absolute;
 }
 
 .filter__menu {
@@ -1144,6 +1158,9 @@ img {
 .reg-login__button:hover::after, .reg-login__button:focus::after {
   opacity: 1;
 }
+.reg-login__button--display {
+  display: block;
+}
 
 .reg-login__button:hover,
 .reg-login__button:focus {
@@ -1182,6 +1199,8 @@ img {
 
 .filter__button--mobile {
   position: absolute;
+  top: -10px;
+  z-index: 100;
   border: 2px solid var(--pure-white);
   padding: 3px;
 }

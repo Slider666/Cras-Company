@@ -241,7 +241,16 @@
 
             <div class="filter-shop--flex">
 
-                <div class="filter">
+                <button class="filter__button filter__button--mobile" type="button" aria-expanded="false" data-mobile-search-button>
+                
+                    <svg class="filter__icon-search" width="32" height="32" aria-label="Перемикач мобільного пошуку">
+                
+                        <use class="icon-search-loupe" href="./images/icon/sprite.svg#search"></use>
+                        <use class="icon-search-cross" href="./images/icon/sprite.svg#icon-cross"></use>
+                    </svg>
+                </button>
+
+                <div class="filter" data-filter-menu>
 
                     <form class="filter__form">
 
@@ -259,8 +268,6 @@
                             </button>
                         </div>
                     </form>
-
-                    <div class="filter__main-menu">
 
                         <ul class="filter__main-list">
                         
@@ -457,28 +464,13 @@
                         
                         <h2 class="filter__title">Виробник</h2>
                         
-                        <button class="reg-login__button" type="submit">
+                        <button class="reg-login__button reg-login__button--display" type="submit">
                             <span class="reg-login__button__text">Фільтрувати</span>
                         </button>
-                    </div>
-
                 </div>
 
                 
                 <div class="shop">
-
-                    <button class="filter__button filter__button--mobile" 
-                    type="button"
-                    aria-expanded="false"
-                    data-mobile-search-button>
-                    
-                        <svg class="filter__icon-search" width="32" height="32"
-                        aria-label="Перемикач мобільного пошуку">
-                    
-                            <use class="icon-search-loupe" href="./images/icon/sprite.svg#search"></use>
-                            <use class="icon-search-cross" href="./images/icon/sprite.svg#icon-cross"></use>
-                        </svg>
-                    </button>
 
                     <h2 class="shop__title shop__title--position">Сортувати</h2>
 

@@ -1,22 +1,38 @@
 .filter-shop--flex {
+  position: relative;
+
   display: flex;
 }
 
 .filter {
+  display: none;
+
   margin-right: 30px;
 
   min-width: 270px;
+
+  position: absolute;
+  
+  top: 40px;
+  left: 0;
+  width: 100%;
+
+  z-index: 100;
+
+  background-color: var(--pure-white);
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+  }
 }
 
 // ----------------------------------------
 // Форма поиска
 // ----------------------------------------
-
-.filter {
-  @media screen and (max-width: 1023px) {
-    display: none;
-  }
-}
 
 .filter__form {
   margin-bottom: 20px;
@@ -47,6 +63,10 @@
 // ----------------------------------------
 // Меню поиска
 // ----------------------------------------
+
+.filter__main-menu {
+position: absolute;
+}
 
 .filter__menu {
   cursor: pointer;

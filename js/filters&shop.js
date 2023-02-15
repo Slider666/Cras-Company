@@ -3,6 +3,7 @@
 // ===========================================================================
 
 const mobileSearchBtn = document.querySelector('[data-mobile-search-button]');
+const mobileSearchMenu = document.querySelector('[data-filter-menu]')
 
 mobileSearchBtn.addEventListener('click', () => {
   const expanded = mobileSearchBtn.getAttribute('aria-expanded') === 'true' || 'false'
@@ -10,6 +11,8 @@ mobileSearchBtn.addEventListener('click', () => {
   mobileSearchBtn.classList.toggle('is-open');
 
   mobileSearchBtn.setAttribute('aria-expanded', !expanded);
+
+  mobileSearchMenu.classList.toggle('is-open');
 })
 
 // ===========================================================================
