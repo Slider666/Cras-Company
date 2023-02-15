@@ -8,7 +8,11 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
     font-size: 44px;
     line-height: 1.36;
   }
