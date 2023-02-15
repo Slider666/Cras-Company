@@ -241,7 +241,11 @@
 
             <div class="filter-shop--flex">
 
-                <button class="filter__button filter__button--mobile" type="button" aria-expanded="false" data-mobile-search-button>
+                <button class="filter__button filter__button--mobile" 
+                type="button" 
+                aria-expanded="false"
+                aria-controls="filter" 
+                data-mobile-search-button>
                 
                     <svg class="filter__icon-search" width="32" height="32" aria-label="Перемикач мобільного пошуку">
                 
@@ -250,7 +254,7 @@
                     </svg>
                 </button>
 
-                <div class="filter" data-filter-menu>
+                <div class="filter" id="filter" data-filter-menu>
 
                     <form class="filter__form">
 
