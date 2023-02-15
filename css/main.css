@@ -299,7 +299,7 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .filter {
-    position: relative;
+    position: static;
     opacity: 1;
   }
 }
