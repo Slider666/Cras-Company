@@ -53,13 +53,22 @@ window.onload = function() {
 // Видимость пароля
 // ===========================================================================
 
-const eyeClose = document.getElementById('eye-close');
-const eyeOpen = document.getElementById('eye-open');
+const eyeCloseRegister = document.getElementById('register-eye-close');
+const eyeOpenRegister = document.getElementById('register-eye-open');
+
+const eyeCloseEnter = document.getElementById('enter-eye-close');
+const eyeOpenEnter = document.getElementById('enter-eye-open');
 
 const showPassword = () => {
-  eyeClose.classList.toggle('js-icon-close');
-  eyeOpen.classList.toggle('js-icon-open');
+  eyeCloseRegister.classList.toggle('js-icon-close');
+  eyeOpenRegister.classList.toggle('js-icon-open');
+
+  eyeCloseEnter.classList.toggle('js-icon-close');
+  eyeOpenEnter.classList.toggle('js-icon-open');
 }
 
-eyeClose.addEventListener('click', showPassword);
-eyeOpen.addEventListener('click', showPassword);
+eyeCloseRegister.addEventListener('click', showPassword);
+eyeOpenRegister.addEventListener('click', showPassword);
+
+eyeCloseEnter.addEventListener('click', showPassword);
+eyeOpenEnter.addEventListener('click', showPassword);

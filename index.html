@@ -18,6 +18,7 @@
 
 <body>
 
+<!-- Хедер -->
     <header class="header">
 
         <div class="container section header__helmet section--reset">
@@ -67,11 +68,11 @@
 
             <div class="reg-login">
 
-                <button class="reg-login__button" type="button" data-modal-open>
+                <button class="reg-login__button" type="button" data-modal-register-open>
                     <span class="reg-login__button__text">Приєднатися</span>
                 </button>
 
-                <button class="reg-login__button reg-login__button--margin" type="button">
+                <button class="reg-login__button reg-login__button--margin" type="button" data-modal-enter-open>
                     <span class="reg-login__button__text">Вхід</span>
                 </button>
             </div>
@@ -79,12 +80,11 @@
 
     </header>
 
-    <div class="backdrop is-hidden">
-        
-    </div>
-
-    <div class="backdrop is-hidden" data-modal>
+<!-- Модальное окно регистрации -->
+    <div class="backdrop is-hidden" data-modal-register>
         <div class="modal">
+
+            <img class="img-modal-register" src="./images/logo-bg.png" alt="Логотип" width="125px">
 
             <button class="modal__button-close" type="button" data-modal-close>
                 <svg width="50" height="50">
@@ -179,15 +179,15 @@
                     <svg class="modal__icon" width="18" height="18">
                         <use href="./images/icon/sprite.svg#password"></use>
                     </svg>
-                    <svg id="eye-close" class="modal__icon modal__icon--rigth" width="30" height="30">
+                    <svg id="register-eye-close" class="modal__icon modal__icon--rigth" width="30" height="30">
                         <use href="./images/icon/sprite.svg#icon-eye-close"></use>
                     </svg>
-                    <svg id="eye-open" class="modal__icon modal__icon--rigth js-icon-close" width="30" height="30">
+                    <svg id="register-eye-open" class="modal__icon modal__icon--rigth js-icon-close" width="30" height="30">
                         <use href="./images/icon/sprite.svg#icon-eye-open"></use>
                     </svg>         
                 </div>
 
-                <label class="modal__label-title" for="password">Підтвердіть пароль</label>
+                <!-- <label class="modal__label-title" for="password">Підтвердіть пароль</label>
                 <div class="modal__case">
                     <input 
                     id="password"
@@ -203,7 +203,7 @@
                     <svg class="modal__icon" width="18" height="18">
                         <use href="./images/icon/sprite.svg#password-confirm"></use>
                     </svg>
-                </div>
+                </div> -->
 
                 <div class="modal__license">
                     <Label class="modal__license-label" for="license">
@@ -213,14 +213,14 @@
                         type="checkbox" 
                         name="agree" 
                         value="license">
-                        <svg class="modal__checkbox-icon" width="16" height="15">
+                        <svg class="modal__checkbox-icon" width="20" height="20">
                             <use class="modal__icon-unchecked" href="./images/icon/sprite.svg#cube"></use>
                             <use class="modal__icon-checked" href="./images/icon/sprite.svg#icon_check"></use>
                         </svg>
 
                         <div> Я, <b><span id="first-name-output"> Тарас</span></b>
                             <b><span id="last-name-output"> Бульба</span></b>, <br>
-                            підтверджую та приймаю
+                            підтверджую та приймаю <br class="br-license">
                             <a class="modal__license-link" href="./licence.html" target="_blank">Угоду
                                 користувача
                             </a>
@@ -237,6 +237,60 @@
         </div>
     </div>
 
+<!-- Модальное окно входа -->
+    <div class="backdrop is-hidden" data-modal-enter>
+        <div class="modal modal--corrective">
+
+            <img class="img-modal-enter" src="./images/logo-bg.png" alt="Логотип" width="125px">
+    
+            <button class="modal__button-close" type="button" data-modal-enter-close>
+                <svg width="50" height="50">
+                    <use href="./images/icon/sprite.svg#logoblack"></use>
+                </svg>
+            </button>
+    
+            <h2 class="modal__title">Вітаємо у компанії <span class="cinzel" lang="en">&#171;CRAS&#187;</span></h2>
+    
+            <form class="modal__form" name="enter-form" autocomplete="on">
+    
+                <label class="modal__label-title" for="email">Пошта</label>
+                <div class="modal__case">
+                    <input id="email" class="modal__input" type="email" name="email" minlength="6"
+                        placeholder="crascompany@gmail.com" pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
+                        required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#form-email"></use>
+                    </svg>
+                </div>
+    
+                <label class="modal__label-title" for="password">Пароль</label>
+                <div class="modal__case">
+                    <input id="password" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
+                        placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                        title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
+                        required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#password"></use>
+                    </svg>
+                    <svg id="enter-eye-close" class="modal__icon modal__icon--rigth" width="30" height="30">
+                        <use href="./images/icon/sprite.svg#icon-eye-close"></use>
+                    </svg>
+                    <svg id="enter-eye-open" class="modal__icon modal__icon--rigth js-icon-close" width="30" height="30">
+                        <use href="./images/icon/sprite.svg#icon-eye-open"></use>
+                    </svg>
+                </div>
+
+                <a class="link-recovery" href="#">Забули свій пароль?</a>
+    
+                <button class="form__button form__button--margin" type="submit">
+    
+                    <span class="form__button__text">Вхід</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+<!-- Основной раздел -->
     <main>
 
         <section class="container section">
@@ -490,6 +544,7 @@
         </section>
     </main>
 
+<!-- Футер -->
     <section class="contacts section">
 
         <div class="container contacts--flex">
@@ -659,11 +714,11 @@
 
             <div class="reg-login__footer">
 
-                <button class="reg-login__button reg-login__button-footer" type="button" data-modal-open-footer>
+                <button class="reg-login__button reg-login__button-footer" type="button" data-modal-register-open-footer>
                     <span class="reg-login__button__text">Приєднатися</span>
                 </button>
 
-                <button class="reg-login__button reg-login__button-footer reg-login__button--margin-footer" type="button">
+                <button class="reg-login__button reg-login__button-footer reg-login__button--margin-footer" type="button" data-modal-enter-open-footer>
                     <span class="reg-login__button__text">Вхід</span>
                 </button>
             </div>
@@ -673,7 +728,7 @@
     <footer class="footer section">
         <div class="container">
 
-            <p class="footer__text cinzel" lang="en">&#169; &#171;CRAS&#187; company. All rights reserved. <br> Різні торгові марки належать відповідним власникам.</p>
+            <p class="footer__text cinzel" lang="en">&#169; &#171;CRAS&#187; company. All rights reserved. <br class="br-footer"> Різні торгові марки належать відповідним власникам.</p>
         </div>
     </footer>
 

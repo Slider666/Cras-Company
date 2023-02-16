@@ -176,8 +176,8 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  br {
-    display: none;
+.br-footer {
+  @media screen and (min-width: 1024px) {
+      display: none;
   }
 }
