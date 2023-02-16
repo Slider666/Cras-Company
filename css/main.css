@@ -1650,7 +1650,7 @@ img {
 
 .img-modal-register {
   position: absolute;
-  top: -10%;
+  top: -11%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1658,12 +1658,12 @@ img {
 @media screen and (min-width: 480px) {
   .img-modal-register {
     width: 150px;
-    top: -11.5%;
+    top: -12.5%;
   }
 }
 @media screen and (min-width: 1024px) {
   .img-modal-register {
-    top: -11%;
+    top: -12%;
   }
 }
 
