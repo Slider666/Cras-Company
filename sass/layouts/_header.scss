@@ -14,6 +14,12 @@
   position: relative;
 }
 
+.nav__list {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
 .nav__list .nav__link--active {
   color: var(--link-color);
 }

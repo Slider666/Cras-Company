@@ -99,8 +99,13 @@
   }
 }
 
-.reg-login__button-footer {
+.reg-login__button-footer,
+.reg-login--mobile-menu {
   display: block;
+}
+
+.reg-login--mobile-menu {
+  margin-top: 30px;
 }
 
 .reg-login__button--margin {
@@ -165,24 +170,6 @@
   transform: translateX(-50%);
   bottom: 0;
 }
-
-// .button {
-//   margin-left: auto;
-
-//   @media screen and (max-width: 767px) {
-//     display: none;
-//   }
-
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     align-items: left;
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     display: flex;
-//     align-items: center;
-//   }
-// }
 
 .modal__button-close {
   position: absolute;
@@ -269,12 +256,9 @@
     z-index: 10;
   }
 
-  @media screen and (min-width: 1280px) {
-
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
-    }
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
   }
 
   &:hover,

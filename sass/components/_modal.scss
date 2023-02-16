@@ -48,14 +48,18 @@
     min-height: 581px;
   }
 
+  &--mobile-menu {
+    min-height: 300px;
+  }
+
   &--corrective {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 30px;
 
     min-height: 333px;
 
-    @media screen and (min-width: 768px) {
-      padding-top: 100px;
+    @media screen and (min-width: 480px) {
+      padding-top: 80px;
     }
   }
 }

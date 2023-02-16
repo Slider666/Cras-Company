@@ -25,7 +25,7 @@
 
             <nav class="nav">
 
-                <button class="mobile-button" type="button">
+                <button class="mobile-button" type="button" data-modal-mobile-menu-open>
                     <img aria-label="Перемикач мобільного меню" src="./images/logo.jpg" alt="логотип" width="78">
 
                     <span class="logo logo--mobile" lang="en">Cras</span>
@@ -37,7 +37,7 @@
 
                 <ul class="nav__list">
 
-                    <li class="nav__item nav__item--hidden">
+                    <li class="nav__item">
 
                         <a class="nav__link nav__link--padding-logo" href="index.html">
 
@@ -56,11 +56,11 @@
                         <a class="nav__link" href="./profile.html">Мій профіль</a>
                     </li> -->
 
-                    <li class="nav__item nav__item--hidden">
+                    <li class="nav__item">
                         <a class="nav__link nav__link--padding" href="./about_us.html">Про нас</a>
                     </li>
 
-                    <li class="nav__item nav__item--hidden">
+                    <li class="nav__item">
                         <a class="nav__link nav__link--padding" href="./licence.html">Угода користувача</a>
                     </li>
                 </ul>
@@ -80,13 +80,56 @@
 
     </header>
 
+<!-- Модальное окно мобилки -->
+    <div class="backdrop is-hidden" data-modal-mobile-menu>
+
+        <div class="modal modal--mobile-menu">
+
+            <img class="img-modal-mobile" src="./images/logo-bg.png" alt="Логотип" width="125px">
+
+            <button class="modal__button-close" type="button" data-modal-mobile-menu-close>
+                <svg width="50" height="50">
+                    <use href="./images/icon/sprite.svg#logoblack"></use>
+                </svg>
+            </button>
+
+            <ul class="modal__nav-list">
+            
+                <!-- <li class="nav__item">
+            
+                            <a class="nav__link" href="./profile.html">Мій профіль</a>
+                        </li> -->
+            
+                <li class="modal__nav-item">
+                    <a class="modal__nav-link" href="./about_us.html">Про нас</a>
+                </li>
+            
+                <li class="modal__nav-item">
+                    <a class="modal__nav-link" href="./licence.html">Угода користувача</a>
+                </li>
+            </ul>
+
+            <div class="reg-login__mobile">
+            
+                <button class="reg-login__button reg-login--mobile-menu" type="button" data-modal-register-open-mobile>
+                    <span class="reg-login__button__text">Приєднатися</span>
+                </button>
+            
+                <button class="reg-login__button reg-login--mobile-menu" type="button"
+                    data-modal-enter-open-mobile>
+                    <span class="reg-login__button__text">Вхід</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
 <!-- Модальное окно регистрации -->
     <div class="backdrop is-hidden" data-modal-register>
         <div class="modal">
 
             <img class="img-modal-register" src="./images/logo-bg.png" alt="Логотип" width="125px">
 
-            <button class="modal__button-close" type="button" data-modal-close>
+            <button class="modal__button-close" type="button" data-modal-register-close>
                 <svg width="50" height="50">
                     <use href="./images/icon/sprite.svg#logoblack"></use>
                 </svg>
@@ -187,7 +230,7 @@
                     </svg>         
                 </div>
 
-                <!-- <label class="modal__label-title" for="password">Підтвердіть пароль</label>
+                <label class="modal__label-title" for="password">Підтвердіть пароль</label>
                 <div class="modal__case">
                     <input 
                     id="password"
@@ -203,7 +246,7 @@
                     <svg class="modal__icon" width="18" height="18">
                         <use href="./images/icon/sprite.svg#password-confirm"></use>
                     </svg>
-                </div> -->
+                </div>
 
                 <div class="modal__license">
                     <Label class="modal__license-label" for="license">
