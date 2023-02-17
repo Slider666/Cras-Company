@@ -145,6 +145,9 @@ img {
     display: none;
   }
 }
+.nav__list--visible {
+  display: block;
+}
 
 .nav__list .nav__link--active {
   color: var(--link-color);
@@ -853,8 +856,13 @@ img {
 
 .licence {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.14;
+}
+@media screen and (min-width: 1024px) {
+  .licence {
+    font-size: 16px;
+  }
 }
 
 .licence > p,
@@ -866,8 +874,14 @@ img {
 .licence > h2 {
   margin: 25px 0;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.14;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .licence > h2 {
+    font-size: 24px;
+  }
 }
 
 .licence a {

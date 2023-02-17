@@ -18,6 +18,10 @@
   @media screen and (max-width: 1024px) {
     display: none;
   }
+
+  &--visible {
+    display: block;
+  }
 }
 
 .nav__list .nav__link--active {
