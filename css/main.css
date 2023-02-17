@@ -140,7 +140,7 @@ img {
   position: relative;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .nav__list {
     display: none;
   }
@@ -914,28 +914,38 @@ img {
 
 .about-us {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.14;
 }
+@media screen and (min-width: 1024px) {
+  .about-us {
+    font-size: 16px;
+  }
+}
 
-.about-us--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 1024px) {
+  .about-us--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .about-us__title {
   margin: 25px 0;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.14;
+  text-align: center;
 }
-
-.about-us--reset {
-  margin-bottom: 0;
+@media screen and (min-width: 1024px) {
+  .about-us__title {
+    font-size: 24px;
+    text-align: left;
+  }
 }
 
 .about-us p {
@@ -943,7 +953,36 @@ img {
   text-align: justify;
 }
 
+.about-us__img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .about-us__img {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-us__img {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-us__img {
+    width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-us__img {
+    width: 500px;
+  }
+}
+
 .about-us__slogan {
+  margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -958,10 +997,6 @@ img {
   list-style: disc;
   margin-bottom: 10px;
   margin-left: 34px;
-}
-
-.about-us--margin {
-  margin-top: 40px;
 }
 
 .logo {
@@ -1072,6 +1107,7 @@ img {
   .modal {
     max-width: 450px;
     padding: 75px 40px 30px 40px;
+    background-size: contain;
   }
 }
 @media screen and (min-width: 1024px) {

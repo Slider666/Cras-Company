@@ -18,21 +18,32 @@
 
 <body>
 
+<!-- Хедер -->
     <header class="header">
 
-        <div class="container header__helmet">
+        <div class="container section header__helmet section--reset">
 
             <nav class="nav">
+
+                <button class="mobile-button" type="button" data-modal-mobile-menu-open>
+                    <img aria-label="Перемикач мобільного меню" src="./images/logo.jpg" alt="логотип" width="78">
+
+                    <span class="logo logo--mobile" lang="en">Cras</span>
+
+                    <span class="point">.</span>
+
+                    <span class="logo logo--head" lang="en">Company</span>
+                </button>
 
                 <ul class="nav__list">
 
                     <li class="nav__item">
 
-                        <a class="nav__link nav__link-padding-logo" href="index.html">
+                        <a class="nav__link nav__link--padding-logo" href="index.html">
 
                             <img src="./images/logo.jpg" alt="логотип" width="78">
 
-                            <span class="logo" lang="en">Cras</span>
+                            <span class="logo logo--margin" lang="en">Cras</span>
 
                             <span class="point">.</span>
 
@@ -41,27 +52,28 @@
                     </li>
 
                     <!-- <li class="nav__item">
-
-                        <a class="nav__link" href="./profile.html">Мій профіль</a>
-                    </li> -->
+        
+                                <a class="nav__link" href="./profile.html">Мій профіль</a>
+                            </li> -->
 
                     <li class="nav__item">
-                        <a class="nav__link nav__link-padding nav__link--active" href="./about_us.html">Про нас</a>
+                        <a class="nav__link nav__link--active nav__link--padding" href="./about_us.html">Про нас</a>
                     </li>
 
                     <li class="nav__item">
-                        <a class="nav__link nav__link-padding" href="./licence.html">Угода користувача</a>
+                        <a class="nav__link nav__link--padding" href="./licence.html">Угода
+                            користувача</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="reg-login">
 
-                <button class="reg-login__button" type="submit">
+                <button class="reg-login__button" type="button" data-modal-register-open>
                     <span class="reg-login__button__text">Приєднатися</span>
                 </button>
 
-                <button class="reg-login__button reg-login__button--margin" type="submit">
+                <button class="reg-login__button reg-login__button--margin" type="button" data-modal-enter-open>
                     <span class="reg-login__button__text">Вхід</span>
                 </button>
             </div>
@@ -69,6 +81,220 @@
 
     </header>
 
+<!-- Модальное окно мобилки -->
+    <div class="backdrop is-hidden" data-modal-mobile-menu>
+
+        <div class="modal modal--mobile-menu">
+
+            <img class="img-modal-mobile" src="./images/logo-bg.png" alt="Логотип" width="125px">
+
+            <button class="modal__button-close" type="button" data-modal-mobile-menu-close>
+                <svg width="50" height="50">
+                    <use href="./images/icon/sprite.svg#logoblack"></use>
+                </svg>
+            </button>
+
+            <ul class="modal__nav-list">
+
+                <!-- <li class="nav__item">
+                    
+                                    <a class="nav__link" href="./profile.html">Мій профіль</a>
+                                </li> -->
+
+                <li class="modal__nav-item">
+                    <a class="modal__nav-link modal__nav-link--active" href="./about_us.html">Про нас</a>
+                </li>
+
+                <li class="modal__nav-item">
+                    <a class="modal__nav-link" href="./licence.html">Угода користувача</a>
+                </li>
+            </ul>
+
+            <div class="reg-login__mobile">
+
+                <button class="reg-login__button reg-login--mobile-menu" type="button" data-modal-register-open-mobile>
+                    <span class="reg-login__button__text">Приєднатися</span>
+                </button>
+
+                <button class="reg-login__button reg-login--mobile-menu" type="button" data-modal-enter-open-mobile>
+                    <span class="reg-login__button__text">Вхід</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+<!-- Модальное окно регистрации -->
+    <div class="backdrop is-hidden" data-modal-register>
+        <div class="modal">
+
+            <img class="img-modal-register" src="./images/logo-bg.png" alt="Логотип" width="125px">
+
+            <button class="modal__button-close" type="button" data-modal-register-close>
+                <svg width="50" height="50">
+                    <use href="./images/icon/sprite.svg#logoblack"></use>
+                </svg>
+            </button>
+
+            <h2 class="modal__title">Реєстрація у компанії <span class="cinzel" lang="en">&#171;CRAS&#187;</span></h2>
+
+            <form class="modal__form" name="registration-form" autocomplete="on">
+
+                <label class="modal__label-title" for="user-name">Ім'я</label>
+                <div class="modal__case">
+                    <input id="user-name" class="modal__input js-first-name-input" type="text" name="user-name"
+                        minlength="2" maxlength="20" placeholder="Тарас" pattern="^[а-яА-ЯёЁіІїЇ]+$"
+                        title="Будь ласка, вводіть тільки літери кирилиці" required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#form-person"></use>
+                    </svg>
+                </div>
+
+                <label class="modal__label-title" for="surname">Прізвице</label>
+                <div class="modal__case">
+                    <input id="user-name" class="modal__input js-last-name-input" type="text" name="surname" minlength="2"
+                        maxlength="20" placeholder="Бульба" pattern="^[а-яА-ЯёЁіІїЇ]+$"
+                        title="Будь ласка, вводіть тільки літери кирилиці" required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#form-person"></use>
+                    </svg>
+                </div>
+
+                <label class="modal__label-title" for="phone">Телефон</label>
+                <div class="modal__case">
+                    <input id="phone" class="modal__input" type="tel" name="phone" value="+380 (__) ___-__-__"
+                        pattern="^\+380(\s+)?\(?(39|50|63|66|67|68|91|92|93|94|95|96|97|98|99)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"
+                        title="такого номера в Україні не існує">
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#form-phone"></use>
+                    </svg>
+                </div>
+
+                <label class="modal__label-title" for="email">Пошта</label>
+                <div class="modal__case">
+                    <input id="email" class="modal__input" type="email" name="email" minlength="6"
+                        placeholder="crascompany@gmail.com" pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
+                        required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#form-email"></use>
+                    </svg>
+                </div>
+
+                <label class="modal__label-title" for="password">Пароль</label>
+                <div class="modal__case">
+                    <input id="password" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
+                        placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                        title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
+                        required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#password"></use>
+                    </svg>
+                    <svg id="register-eye-close" class="modal__icon modal__icon--rigth" width="30" height="30">
+                        <use href="./images/icon/sprite.svg#icon-eye-close"></use>
+                    </svg>
+                    <svg id="register-eye-open" class="modal__icon modal__icon--rigth js-icon-close" width="30" height="30">
+                        <use href="./images/icon/sprite.svg#icon-eye-open"></use>
+                    </svg>
+                </div>
+
+                <!-- <label class="modal__label-title" for="password">Підтвердіть пароль</label>
+                        <div class="modal__case">
+                            <input 
+                            id="password"
+                            class="modal__input" 
+                            type="password" 
+                            name="password"                      
+                            minlength="6" 
+                            maxlength="16"
+                            placeholder="madeInFuture2023" 
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                            title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
+                            required>
+                            <svg class="modal__icon" width="18" height="18">
+                                <use href="./images/icon/sprite.svg#password-confirm"></use>
+                            </svg>
+                        </div> -->
+
+                <div class="modal__license">
+                    <Label class="modal__license-label" for="license">
+                        <input id="license" class="modal__checkbox" type="checkbox" name="agree" value="license">
+                        <svg class="modal__checkbox-icon" width="20" height="20">
+                            <use class="modal__icon-unchecked" href="./images/icon/sprite.svg#cube"></use>
+                            <use class="modal__icon-checked" href="./images/icon/sprite.svg#icon_check"></use>
+                        </svg>
+
+                        <div> Я, <b><span id="first-name-output"> Тарас</span></b>
+                            <b><span id="last-name-output"> Бульба</span></b>, <br>
+                            підтверджую та приймаю <br class="br-license">
+                            <a class="modal__license-link" href="./licence.html" target="_blank">Угоду
+                                користувача
+                            </a>
+                        </div>
+                    </Label>
+
+                </div>
+
+                <button class="form__button" type="submit">
+
+                    <span class="form__button__text">Приєднатися</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+<!-- Модальное окно входа -->
+    <div class="backdrop is-hidden" data-modal-enter>
+        <div class="modal modal--corrective">
+
+            <img class="img-modal-enter" src="./images/logo-bg.png" alt="Логотип" width="125px">
+
+            <button class="modal__button-close" type="button" data-modal-enter-close>
+                <svg width="50" height="50">
+                    <use href="./images/icon/sprite.svg#logoblack"></use>
+                </svg>
+            </button>
+
+            <h2 class="modal__title">Вітаємо у компанії <span class="cinzel" lang="en">&#171;CRAS&#187;</span></h2>
+
+            <form class="modal__form" name="enter-form" autocomplete="on">
+
+                <label class="modal__label-title" for="email">Пошта</label>
+                <div class="modal__case">
+                    <input id="email" class="modal__input" type="email" name="email" minlength="6"
+                        placeholder="crascompany@gmail.com" pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
+                        required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#form-email"></use>
+                    </svg>
+                </div>
+
+                <label class="modal__label-title" for="password">Пароль</label>
+                <div class="modal__case">
+                    <input id="password" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
+                        placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                        title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
+                        required>
+                    <svg class="modal__icon" width="18" height="18">
+                        <use href="./images/icon/sprite.svg#password"></use>
+                    </svg>
+                    <svg id="enter-eye-close" class="modal__icon modal__icon--rigth" width="30" height="30">
+                        <use href="./images/icon/sprite.svg#icon-eye-close"></use>
+                    </svg>
+                    <svg id="enter-eye-open" class="modal__icon modal__icon--rigth js-icon-close" width="30" height="30">
+                        <use href="./images/icon/sprite.svg#icon-eye-open"></use>
+                    </svg>
+                </div>
+
+                <a class="link-recovery" href="#">Забули свій пароль?</a>
+
+                <button class="form__button form__button--margin" type="submit">
+
+                    <span class="form__button__text">Вхід</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+<!-- Основной раздел -->
     <main>
 
         <div class="container section">
@@ -84,8 +310,7 @@
                         <div>
 
                             <p>Вас вітає компанія <span lang="en" class="cinzel">&#171;CRAS&#187;</span>! Дякуємо, що до
-                                нас
-                                приєдналися.
+                                нас приєдналися.
                             </p>
 
                             <p>Зараз всі ми бажаємо витрачати менше, та мати можливість купувати дешевше те, що
@@ -116,7 +341,7 @@
                                 користуєтесь щодня.</p>
                         </div>
 
-                        <img src="./images/cras.jpg" alt="крас коин" width="500">
+                        <img class="about-us__img" src="./images/cras-coin.jpg" alt="крас коин" width="250">
                     </div>
 
                     <h2 class="about-us__slogan">Компанія <span lang="en" class="cinzel">&#171;CRAS&#187;</span> -
@@ -174,14 +399,14 @@
                         закладено у вашому бюджеті), але й зробити це також джерелом власного прибутку та отримувати
                         додатковий дохід.</p>
 
-                    <h2 class="about-us__slogan about-us--margin">Компанія <span lang="en"
+                    <h2 class="about-us__slogan">Компанія <span lang="en"
                             class="cinzel">&#171;CRAS&#187;</span>
                         - ідея змінює світ! Ідея змінює...</h2>
                 </li>
 
                 <li class="about-us--flex">
 
-                    <img src="./images/usdt.jpg" alt="тизер" width="500">
+                    <img class="about-us__img" src="./images/usdt.jpg" alt="тизер" width="500">
 
                     <div>
 
@@ -234,21 +459,22 @@
 
     </main>
 
+<!-- Футер -->
     <section class="contacts section">
 
         <div class="container contacts--flex">
 
-            <div>
+            <div class="contacts__case">
 
                 <nav class="nav nav--contacts">
 
-                    <ul class="nav__list">
+                    <ul class="nav__list nav__list--visible">
 
                         <li class="nav__item">
 
                             <a class="nav__link" href="index.html">
 
-                                <span class="logo logo-reset" lang="en">Cras</span>
+                                <span class="logo logo--reset" lang="en">Cras</span>
 
                                 <span class="point">.</span>
 
@@ -258,10 +484,60 @@
                     </ul>
                 </nav>
 
-                <h2 class="cinzel" lang="en">Made in future</h2>
+                <h2 class="cinzel footer-cinzel" lang="en">Made in future</h2>
             </div>
 
-            <div>
+            <div class="contacts--new-flex">
+
+                <div class="contacts__case">
+
+                    <h3 class="contacts__title">Контакти</h3>
+
+                    <ul class="contacts__list">
+
+                        <li class="contacts__item">
+
+                            <a class="contacts__link" href="mailto:cras.company@gmail.com">
+
+                                <svg class="contacts__icon" width="16" height="12">
+
+                                    <use href="./images/icon/sprite.svg#head-envelope"></use>
+                                </svg>
+                                cras.company@gmail.com
+                            </a>
+                        </li>
+
+                        <li class="contacts__item">
+
+                            <a class="contacts__link" href="tel:+380961111111">
+
+                                <svg class="contacts__icon" width="10" height="16">
+
+                                    <use href="./images/icon/sprite.svg#head-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacts__case">
+
+                    <h3 class="contacts__title">Компанія</h3>
+
+                    <ul>
+                        <li class="contacts__item">
+                            <a class="contacts__link" href="./about_us.html">Про нас</a>
+                        </li>
+
+                        <li class="contacts__item">
+                            <a class="contacts__link" href="./licence.html">Угода користувача</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contacts__case contacts__case--none">
 
                 <h3 class="contacts__title">Контакти</h3>
 
@@ -293,7 +569,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="contacts__case contacts__case--none">
 
                 <h3 class="contacts__title">Компанія</h3>
 
@@ -308,57 +584,54 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="contacts__case">
 
-                <h3 class="contacts__title contacts--title">Приєднуйтесь</h3>
+                <h3 class="contacts__title contacts__title--center">Приєднуйтесь</h3>
 
-                <div>
-                    <ul class="contacts_social">
+                <ul class="contacts__social">
 
-                        <li class="contacts__list">
-                            <a class="socials-link" href="">
-                                <svg class="social-icon" width="40" height="40">
-                                    <use class="social-icon__main" href="./images/icon/sprite.svg#icon-facebook"></use>
-                                    <use class="social-icon__hover"
-                                        href="./images/icon/sprite.svg#icon-facebook-hovered">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
+                    <li class="contacts__list contacts__list--margin">
+                        <a class="socials-link" href="">
+                            <svg class="social-icon" width="40" height="40">
+                                <use class="social-icon__main" href="./images/icon/sprite.svg#icon-facebook"></use>
+                                <use class="social-icon__hover" href="./images/icon/sprite.svg#icon-facebook-hovered">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
 
-                        <li class="contacts__list">
-                            <a class="socials-link" href="">
-                                <svg class="social-icon" width="40" height="40">
-                                    <use class="social-icon__main" href="./images/icon/sprite.svg#icon-twitter"></use>
-                                    <use class="social-icon__hover"
-                                        href="./images/icon/sprite.svg#icon-twitter-hovered">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
+                    <li class="contacts__list contacts__list--margin">
+                        <a class="socials-link" href="">
+                            <svg class="social-icon" width="40" height="40">
+                                <use class="social-icon__main" href="./images/icon/sprite.svg#icon-twitter"></use>
+                                <use class="social-icon__hover" href="./images/icon/sprite.svg#icon-twitter-hovered">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
 
-                        <li class="contacts__list">
-                            <a class="socials-link" href="">
-                                <svg class="social-icon" width="40" height="40">
-                                    <use class="social-icon__main" href="./images/icon/sprite.svg#icon-linkedin"></use>
-                                    <use class="social-icon__hover"
-                                        href="./images/icon/sprite.svg#icon-linkedin-hovered">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
+                    <li class="contacts__list">
+                        <a class="socials-link" href="">
+                            <svg class="social-icon" width="40" height="40">
+                                <use class="social-icon__main" href="./images/icon/sprite.svg#icon-linkedin"></use>
+                                <use class="social-icon__hover" href="./images/icon/sprite.svg#icon-linkedin-hovered">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
 
-                    </ul>
-                </div>
+                </ul>
+
             </div>
 
-            <div>
+            <div class="reg-login__footer">
 
-                <button class="reg-login__button" type="submit">
+                <button class="reg-login__button reg-login__button-footer" type="button" data-modal-register-open-footer>
                     <span class="reg-login__button__text">Приєднатися</span>
                 </button>
 
-                <button class="reg-login__button reg-login__button--margin-footer" type="submit">
+                <button class="reg-login__button reg-login__button-footer reg-login__button--margin-footer" type="button"
+                    data-modal-enter-open-footer>
                     <span class="reg-login__button__text">Вхід</span>
                 </button>
             </div>
@@ -367,9 +640,19 @@
 
     <footer class="footer section">
         <div class="container">
-            <p class="footer__text cinzel" lang="en">&#169; &#171;CRAS&#187; company. All rights reserved.</p>
+
+            <p class="footer__text cinzel" lang="en">&#169; &#171;CRAS&#187; company. All rights reserved. <br
+                    class="br-footer"> Різні торгові марки належать відповідним власникам.</p>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+        integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/register-form.js"></script>
+    <script type="module" src="./js/filters&shop.js"></script>
 </body>
 
 </html>

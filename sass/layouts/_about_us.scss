@@ -1,24 +1,34 @@
 .about-us {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.14;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 .about-us--flex {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .about-us__title {
   margin: 25px 0;
 
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.14;
-}
 
-.about-us--reset {
-  margin-bottom: 0;
+  text-align: center;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 24px;
+
+    text-align: left;
+  }
 }
 
 .about-us p {
@@ -27,7 +37,33 @@
   text-align: justify;
 }
 
+.about-us__img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    width: 300px;
+  }
+
+  @media screen and (min-width: 768px) {
+   width: 350px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 400px;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+    @media screen and (min-width: 1280px) {
+    width: 500px;
+  }
+}
+
 .about-us__slogan {
+  margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -44,8 +80,4 @@
 
   margin-bottom: 10px;
   margin-left: 34px;
-}
-
-.about-us--margin {
-  margin-top: 40px;
 }
