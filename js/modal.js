@@ -24,29 +24,48 @@
     openModalEnterBtnFooter: document.querySelector("[data-modal-enter-open-footer]"),
   };
 
-  refs.openModalMobileMenuBtn.addEventListener("click", toggleModalMobileMenu);
-  refs.closeModalMobileMenuBtn.addEventListener("click", toggleModalMobileMenu);
+  // refs.openModalMobileMenuBtn.addEventListener("click", toggleModalMobileMenu);
+  // refs.closeModalMobileMenuBtn.addEventListener("click", toggleModalMobileMenu);
 
-  function toggleModalMobileMenu() {
-    refs.modalMobileMenu.classList.toggle("is-hidden");
+  // function toggleModalMobileMenu() {
+  //   refs.modalMobileMenu.classList.toggle("is-hidden");
+  // }
+
+  // refs.openModalRegisterMobileBtn.addEventListener("click", toggleModalRegister)
+  // refs.openModalRegisterBtn.addEventListener("click", toggleModalRegister);
+  // refs.closeModalRegiserBtn.addEventListener("click", toggleModalRegister);
+  // refs.openModalRegisterBtnFooter.addEventListener("click", toggleModalRegister);
+
+  // function toggleModalRegister() {
+  //   refs.modalRegister.classList.toggle("is-hidden");
+  // }
+
+  // refs.openModalEnterMobileBtn.addEventListener("click", toggleModalEnter)
+  // refs.openModalEnterBtn.addEventListener("click", toggleModalEnter);
+  // refs.closeModalEnterBtn.addEventListener("click", toggleModalEnter);
+  // refs.openModalEnterBtnFooter.addEventListener('click', toggleModalEnter);
+
+  // function toggleModalEnter() {
+  //   refs.modalEnter.classList.toggle("is-hidden");
+  // }
+
+  function toggleModal(modal) {
+    document.body.classList.toggle('modal-open')
+    modal.classList.toggle("is-hidden");
   }
 
-  refs.openModalRegisterMobileBtn.addEventListener("click", toggleModalRegister)
-  refs.openModalRegisterBtn.addEventListener("click", toggleModalRegister);
-  refs.closeModalRegiserBtn.addEventListener("click", toggleModalRegister);
-  refs.openModalRegisterBtnFooter.addEventListener("click", toggleModalRegister);
-
-  function toggleModalRegister() {
-    refs.modalRegister.classList.toggle("is-hidden");
-  }
-
-  refs.openModalEnterMobileBtn.addEventListener("click", toggleModalEnter)
-  refs.openModalEnterBtn.addEventListener("click", toggleModalEnter);
-  refs.closeModalEnterBtn.addEventListener("click", toggleModalEnter);
-  refs.openModalEnterBtnFooter.addEventListener('click', toggleModalEnter);
-
-  function toggleModalEnter() {
-    refs.modalEnter.classList.toggle("is-hidden");
-  }
+  refs.openModalMobileMenuBtn.addEventListener("click", () => toggleModal(refs.modalMobileMenu));
+  refs.openModalRegisterMobileBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
+  refs.openModalRegisterBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
+  refs.openModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
+  refs.openModalEnterMobileBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
+  
+  refs.closeModalMobileMenuBtn.addEventListener("click", () => toggleModal(refs.modalMobileMenu));
+  refs.closeModalRegiserBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
+  refs.closeModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
+  
+  refs.openModalRegisterBtnFooter.addEventListener("click", () => toggleModal(refs.modalRegister));
+  refs.openModalEnterBtnFooter.addEventListener("click", () => toggleModal(refs.modalEnter));
+  
   
 })();

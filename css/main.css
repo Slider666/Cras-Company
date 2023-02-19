@@ -1077,6 +1077,7 @@ img {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -1127,6 +1128,10 @@ img {
   .modal--corrective {
     padding-top: 80px;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .modal__form input::-webkit-input-placeholder {

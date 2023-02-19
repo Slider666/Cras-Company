@@ -11,6 +11,8 @@
 
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
+
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -63,6 +65,10 @@
       padding-top: 80px;
     }
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .modal__form input::placeholder {
