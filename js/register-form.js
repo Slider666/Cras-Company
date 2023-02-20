@@ -66,5 +66,4 @@ const showPassword = () => {
   passwordEnterInput.type = passwordEnterInput.type === 'password' ? 'text' : 'password';
 };
 
-[...eyeCloseElements, ...eyeOpenElements]
-  .forEach(elem => elem.addEventListener('click', showPassword));
+[...eyeCloseElements, ...eyeOpenElements].forEach(elem => elem.addEventListener('click', showPassword));
