@@ -1,7 +1,7 @@
 .img-modal-mobile {
     position: absolute;
     
-    top: -18.5%;
+    top: -17%;
     left: 50%;
 
     transform: translateX(-50%);
@@ -9,7 +9,7 @@
     @media screen and (min-width: 480px) {
         width: 150px;
 
-        top: -20%;
+        top: -17%;
     }
 }
 

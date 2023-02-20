@@ -50,22 +50,30 @@
   // }
 
   function toggleModal(modal) {
-    document.body.classList.toggle('modal-open')
+    document.body.classList.toggle('modal-open');
     modal.classList.toggle("is-hidden");
   }
 
+  // Отрытие и закрытие модального окна мобилки
   refs.openModalMobileMenuBtn.addEventListener("click", () => toggleModal(refs.modalMobileMenu));
-  refs.openModalRegisterMobileBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
-  refs.openModalRegisterBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
-  refs.openModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
-  refs.openModalEnterMobileBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
-  
   refs.closeModalMobileMenuBtn.addEventListener("click", () => toggleModal(refs.modalMobileMenu));
+
+  function addClickHandler(openModalMobileBtn, modalMobileMenu, modalWindow) {
+    openModalMobileBtn.addEventListener("click", () => {
+      toggleModal(modalMobileMenu);
+      toggleModal(modalWindow);
+    });
+  }
+
+  addClickHandler(refs.openModalRegisterMobileBtn, refs.modalMobileMenu, refs.modalRegister);
+  addClickHandler(refs.openModalEnterMobileBtn, refs.modalMobileMenu, refs.modalEnter);
+
+  // Открытие и закрытие модального окна регистрации и входа
+  refs.openModalRegisterBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
   refs.closeModalRegiserBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
+  refs.openModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
   refs.closeModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
   
   refs.openModalRegisterBtnFooter.addEventListener("click", () => toggleModal(refs.modalRegister));
   refs.openModalEnterBtnFooter.addEventListener("click", () => toggleModal(refs.modalEnter));
-  
-  
 })();

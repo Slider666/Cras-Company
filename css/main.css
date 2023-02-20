@@ -1096,9 +1096,7 @@ img {
   width: 100%;
   min-height: 550px;
   padding: 60px 20px 20px 20px;
-  background: var(--pure-white) url(../../images/background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--pure-white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
@@ -1436,7 +1434,7 @@ body.modal-open {
 
 .img-modal-mobile {
   position: absolute;
-  top: -18.5%;
+  top: -17%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1444,7 +1442,7 @@ body.modal-open {
 @media screen and (min-width: 480px) {
   .img-modal-mobile {
     width: 150px;
-    top: -20%;
+    top: -17%;
   }
 }
 

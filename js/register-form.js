@@ -52,23 +52,19 @@ window.onload = function() {
 // ===========================================================================
 // Видимость пароля
 // ===========================================================================
+const passwordRegisterInput = document.getElementById('password-register');
+const passwordEnterInput = document.getElementById('password-enter');
 
-const eyeCloseRegister = document.getElementById('register-eye-close');
-const eyeOpenRegister = document.getElementById('register-eye-open');
-
-const eyeCloseEnter = document.getElementById('enter-eye-close');
-const eyeOpenEnter = document.getElementById('enter-eye-open');
+const eyeCloseElements = document.querySelectorAll('.js-icon-close');
+const eyeOpenElements = document.querySelectorAll('.js-icon-open');
 
 const showPassword = () => {
-  eyeCloseRegister.classList.toggle('js-icon-close');
-  eyeOpenRegister.classList.toggle('js-icon-open');
+  eyeCloseElements.forEach(elem => elem.classList.toggle('js-icon-close'));
+  eyeOpenElements.forEach(elem => elem.classList.toggle('js-icon-open'));
 
-  eyeCloseEnter.classList.toggle('js-icon-close');
-  eyeOpenEnter.classList.toggle('js-icon-open');
-}
+  passwordRegisterInput.type = passwordRegisterInput.type === 'password' ? 'text' : 'password';
+  passwordEnterInput.type = passwordEnterInput.type === 'password' ? 'text' : 'password';
+};
 
-eyeCloseRegister.addEventListener('click', showPassword);
-eyeOpenRegister.addEventListener('click', showPassword);
-
-eyeCloseEnter.addEventListener('click', showPassword);
-eyeOpenEnter.addEventListener('click', showPassword);
+[...eyeCloseElements, ...eyeOpenElements]
+  .forEach(elem => elem.addEventListener('click', showPassword));

@@ -94,6 +94,10 @@
             </button>
 
             <ul class="modal__nav-list">
+
+                <li class="modal__nav-item">
+                    <a class="modal__nav-link modal__nav-link--active" href="./index.html">Головна</a>
+                </li>
             
                 <!-- <li class="nav__item">
             
@@ -209,7 +213,7 @@
                 <label class="modal__label-title" for="password">Пароль</label>
                 <div class="modal__case">
                     <input 
-                    id="password"
+                    id="password-register"
                     class="modal__input" 
                     type="password" 
                     name="password"                      
@@ -282,6 +286,7 @@
 
 <!-- Модальное окно входа -->
     <div class="backdrop is-hidden" data-modal-enter>
+        
         <div class="modal modal--corrective">
 
             <img class="img-modal-enter" src="./images/logo-bg.png" alt="Логотип" width="125px">
@@ -297,27 +302,35 @@
             <form class="modal__form" name="enter-form" autocomplete="on">
     
                 <label class="modal__label-title" for="email">Пошта</label>
+
                 <div class="modal__case">
+
                     <input id="email" class="modal__input" type="email" name="email" minlength="6"
                         placeholder="crascompany@gmail.com" pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
                         required>
+
                     <svg class="modal__icon" width="18" height="18">
                         <use href="./images/icon/sprite.svg#form-email"></use>
                     </svg>
                 </div>
     
                 <label class="modal__label-title" for="password">Пароль</label>
+
                 <div class="modal__case">
-                    <input id="password" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
+
+                    <input id="password-enter" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
                         placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                         title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
                         required>
+
                     <svg class="modal__icon" width="18" height="18">
                         <use href="./images/icon/sprite.svg#password"></use>
                     </svg>
+
                     <svg id="enter-eye-close" class="modal__icon modal__icon--rigth" width="30" height="30">
                         <use href="./images/icon/sprite.svg#icon-eye-close"></use>
                     </svg>
+
                     <svg id="enter-eye-open" class="modal__icon modal__icon--rigth js-icon-close" width="30" height="30">
                         <use href="./images/icon/sprite.svg#icon-eye-open"></use>
                     </svg>
