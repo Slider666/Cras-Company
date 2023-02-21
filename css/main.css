@@ -1737,4 +1737,56 @@ body.modal-open {
   margin-top: 20px;
   text-align: center;
   color: var(--link-color);
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.carousel__img {
+  min-width: calc((100% - 80px) / 5);
+  height: 150px;
+  margin-right: 20px;
+}
+
+.carousel__icon {
+  fill: #2e2e2e;
+  -webkit-transition: fill 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
+}
+.carousel__icon:hover, .carousel__icon:focus {
+  fill: var(--link-color);
+}
+
+.carousel-prev-btn,
+.carousel-next-btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  position: absolute;
+}
+
+.carousel-prev-btn--position {
+  right: 102%;
+}
+
+.carousel-next-btn--position {
+  left: 102%;
 }/*# sourceMappingURL=main.css.map */

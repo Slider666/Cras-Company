@@ -185,7 +185,7 @@
 
                 <label class="modal__label-title" for="password">Пароль</label>
                 <div class="modal__case">
-                    <input id="password" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
+                    <input id="password-register" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
                         placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                         title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
                         required>
@@ -273,7 +273,7 @@
 
                 <label class="modal__label-title" for="password">Пароль</label>
                 <div class="modal__case">
-                    <input id="password" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
+                    <input id="password-enter" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
                         placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                         title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
                         required>
@@ -461,6 +461,32 @@
                     class="cinzel">&#171;CRAS&#187;</span> - зроблено у майбутньому!</h2>
         </div>
 
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <img class="carousel__img" src="./images/carusel/01.jpg">
+                <img class="carousel__img" src="./images/carusel/02.jpg">
+                <img class="carousel__img" src="./images/carusel/03.jpg">
+                <img class="carousel__img" src="./images/carusel/04.jpg">
+                <img class="carousel__img" src="./images/carusel/05.jpg">
+                <img class="carousel__img" src="./images/carusel/06.jpg">
+                <img class="carousel__img" src="./images/carusel/07.jpg">
+                <img class="carousel__img" src="./images/carusel/08.jpg">
+            </div>
+
+            <button class="carousel-prev-btn carousel-prev-btn--position">
+                <svg class="carousel__icon" width="40" height="40">
+                    <use href="./images/icon/sprite.svg#icon-circle-left"></use>
+                </svg>
+            </button>
+            
+            <button class="carousel-next-btn carousel-next-btn--position">
+                <svg class="carousel__icon" width="40" height="40">
+                    <use href="./images/icon/sprite.svg#icon-circle-right"></use>
+                </svg>
+            </button>
+        </div>
+
+        <h2 class="about-us__slogan about-us--margin">Котики нашої компанії</h2>
     </main>
 
 <!-- Футер -->
@@ -656,7 +682,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script type="module" src="./js/modal.js"></script>
     <script type="module" src="./js/register-form.js"></script>
-    <script type="module" src="./js/filters&shop.js"></script>
+    <script type="module" src="./js/slider.js"></script>
 </body>
 
 </html>

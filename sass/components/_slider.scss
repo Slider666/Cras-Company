@@ -1,0 +1,54 @@
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 40px auto;
+
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.carousel__img {
+    min-width: calc((100% - 4 * 20px) / 5);
+    height: 150px;
+    margin-right: 20px;
+}
+
+.carousel__icon {
+    fill: #2e2e2e;
+    transition: fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--link-color);
+    }
+}
+
+.carousel-prev-btn,
+.carousel-next-btn {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    position: absolute;
+}
+
+.carousel-prev-btn--position{
+    right: 102%;
+}
+
+.carousel-next-btn--position {
+    left: 102%;
+}
+
+// /* Удаление кнопок управления в случае если слайд всего один */
+// .carousel-prev-btn:only-child,
+// .carousel-next-btn:only-child {
+//     display: none;
+// }
