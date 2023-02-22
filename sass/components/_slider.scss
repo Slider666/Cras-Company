@@ -1,6 +1,7 @@
 .section--position {
-    margin: 0 30px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     position: relative;
 }
 
@@ -11,7 +12,14 @@
 
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+
+    @media screen and (min-width: 480px) {
+        margin: 0 15px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        margin: 0 25px;
+    }
 }
 
 .swiper-wrapper {
@@ -61,12 +69,14 @@
     background: transparent;
     border: none;
 
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    transform: translateY(-50%);
-
     cursor: pointer;
+
+    @media screen and (max-width: 479px) {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .swiper-button-prev--position {
@@ -78,7 +88,7 @@
 }
 
 .swiper__icon {
-    fill: #2e2e2e;
+    fill: #2e2e2e;;
     transition: fill 250ms var(--timing-function);
 
     &:hover,
@@ -86,6 +96,7 @@
         fill: var(--link-color);
     }
 }
+
 
 .about-us__slogan--position {
     margin: 20px 0 40px 0;
