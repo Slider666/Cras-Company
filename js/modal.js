@@ -51,7 +51,19 @@
 
   function toggleModal(modal) {
     document.body.classList.toggle('modal-open');
+    
     modal.classList.toggle("is-hidden");
+
+    function closeModal() {
+      document.body.classList.remove('modal-open');
+      modal.classList.add("is-hidden");
+    }
+
+    window.addEventListener('keydown', function(event) {
+      if (event.code === 'Escape') {
+        closeModal();
+      }
+    });
   }
 
   // Отрытие и закрытие модального окна мобилки
