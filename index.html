@@ -355,19 +355,6 @@
 
             <div class="filter-shop--flex">
 
-                <button class="filter__button filter__button--mobile" 
-                type="button" 
-                aria-expanded="false"
-                aria-controls="filter" 
-                data-mobile-search-button>
-                
-                    <svg class="filter__icon-search" width="32" height="32" aria-label="Перемикач мобільного пошуку">
-                
-                        <use class="icon-search-loupe" href="./images/icon/sprite.svg#search"></use>
-                        <use class="icon-search-cross" href="./images/icon/sprite.svg#icon-cross"></use>
-                    </svg>
-                </button>
-
                 <div class="filter" id="filter" data-filter-menu>
 
                     <form class="filter__form">
@@ -377,220 +364,233 @@
                         <div class="filter__search">
                             <input type="text" name="search" id="search" placeholder="товар, бренд, виробник" autofocus>
 
-                            <button class="filter__button" type="submit">
-
+                            <button class="filter__button filter__button--margin" type="submit">
+                            
                                 <svg class="filter__icon-search" width="32" height="32">
-
-                                    <use href="./images/icon/sprite.svg#search"></use>
+                            
+                                    <use class="icon-search-loupe" href="./images/icon/sprite.svg#search"></use>
                                 </svg>
                             </button>
                         </div>
                     </form>
 
-                        <ul class="filter__main-list">
-                        
-                            <li class="filter__menu">
-                        
-                                <div class="filter__icon-title-box js-filter__menu-food">
-                        
-                                    <svg class="filter__icon js-filter__icon-food-close" width="32" height="60">
-                        
-                                        <use href="./images/icon/sprite.svg#food"></use>
-                                    </svg>
-                        
-                                    <svg class="filter__icon-open js-filter__icon-food-open" width="32" height="60">
-                        
-                                        <use href="./images/icon/sprite.svg#food_open"></use>
-                                    </svg>
-                        
-                                    <h2 class="filter-icon-title__title">Продукти харчування</h2>
-                                </div>
-                        
-                                <ul class="filter__list js-filter__food-list">
-                        
-                                    <li class="filter-list__item">Сухі сніданки</li>
-                        
-                                    <li class="filter-list__item">М’ясні продукти</li>
-                        
-                                    <li class="filter-list__item">Сирні продукти</li>
-                        
-                                    <li class="filter-list__item">Макарони</li>
-                        
-                                    <li class="filter-list__item">Консервована продукція та паштети</li>
-                        
-                                    <li class="filter-list__item">Оливки і оливкове масло</li>
-                        
-                                    <li class="filter-list__item">Модифікатори смаку</li>
-                        
-                                    <li class="filter-list__item">Солодощі</li>
-                        
-                                    <li class="filter__secondary-menu">
-                        
-                                        <div class="filter__secondary-icon-title-box --margin js-filter__secondary-menu-food">
-                        
-                                            <svg class="filter__icon-secondary js-filter__secondary-icon-food-close" width="30" height="32">
-                        
-                                                <use href="./images/icon/sprite.svg#tea-cofee"></use>
-                                            </svg>
-                        
-                                            <svg class="filter__icon-secondary-open icon--position-cofee js-filter__secondary-icon-food-open"
-                                                width="39">
-                        
-                                                <use href="./images/icon/sprite.svg#tea-cofee_open"></use>
-                                            </svg>
-                        
-                                            <h3 class="filter-icon-title__secondary-title">Чай, кава, капучіно, сік</h3>
-                                        </div>
-                        
-                                        <ul class="filter__secondary-list js-filter__food-secondary-list">
-                        
-                                            <li>Чай</li>
-                        
-                                            <li>Кава в зернах</li>
-                        
-                                            <li>Мелена кава</li>
-                        
-                                            <li>Розчинна кава та капучіно</li>
-                        
-                                            <li>Сік</li>
-                                        </ul>
-                        
-                                    </li>
-                        
-                                    <li class="filter-list__item filter-list__item--padding">Інші продукти харчування</li>
-                                </ul>
-                            </li>
-                        
-                            <li class="filter__menu">
-                        
-                                <div class="filter__icon-title-box js-filter__menu-chemical">
-                        
-                                    <svg class="filter__icon js-filter__icon-chemical-close" width="32" height="40">
-                        
-                                        <use href="./images/icon/sprite.svg#chemical"></use>
-                                    </svg>
-                        
-                                    <svg class="filter__icon-open js-filter__icon-chemical-open" width="32" height="40">
-                        
-                                        <use href="./images/icon/sprite.svg#chemical_open"></use>
-                                    </svg>
-                        
-                                    <h2 class="filter-icon-title__title">Побудтова хімія</h2>
-                                </div>
-                        
-                                <ul class="filter__list js-filter__chemical-list">
-                        
-                                    <li class="filter__secondary-menu">
-                        
-                                        <div class="filter__secondary-icon-title-box js-filter__secondary-menu-chemical">
-                        
-                                            <svg class="filter__icon-secondary js-filter__secondary-icon-chemical-close" width="32" height="32">
-                        
-                                                <use href="./images/icon/sprite.svg#wash"></use>
-                                            </svg>
-                        
-                                            <svg class="filter__icon-secondary-open icon--position-wash js-filter__secondary-icon-chemical-open"
-                                                width="32" height="32">
-                        
-                                                <use href="./images/icon/sprite.svg#wash_open"></use>
-                                            </svg>
-                        
-                                            <h3 class="filter-icon-title__secondary-title">Засоби для миття</h3>
-                                        </div>
-                        
-                                        <ul class="filter__secondary-list js-filter__chemical-secondary-list">
-                        
-                                            <li>Порошки</li>
-                        
-                                            <li>Гелі для прання</li>
-                        
-                                            <li>Капсули та таблетки</li>
-                        
-                                            <li>Ополіскувачі</li>
-                        
-                                            <li>Засоби для миття посуду</li>
-                        
-                                            <li>Інші засоби для миття</li>
-                                        </ul>
-                        
-                                    </li>
-                        
-                                    <li class="filter-list__item">Засоби для чищення</li>
-                        
-                                    <li class="filter-list__item">Засоби для дезінфекції</li>
-                        
-                                    <li class="filter-list__item">Освіжувачі та ароматизатори повітря</li>
-                        
-                                    <li class="filter-list__item filter-list__item--padding">Засоби для виведення плям</li>
-                                </ul>
-                            </li>
-                        
-                            <li class="filter__menu">
-                        
-                                <div class="filter__icon-title-box js-filter__menu-gigiena">
-                        
-                                    <svg class="filter__icon js-filter__icon-gigiena-close" width="32" height="50">
-                        
-                                        <use href="./images/icon/sprite.svg#gigiena"></use>
-                                    </svg>
-                        
-                                    <svg class="filter__icon-open icon--position-gigiena js-filter__icon-gigiena-open" width="32" height="50">
-                        
-                                        <use href="./images/icon/sprite.svg#gigiena_open"></use>
-                                    </svg>
-                        
-                                    <h2 class="filter-icon-title__title">Засоби гігієни</h2>
-                                </div>
-                        
-                                <ul class="filter__list js-filter__gigiena-list">
-                                    <li class="filter-list__item">Для волосся</li>
-                                    <li class="filter-list__item">Для гоління</li>
-                                    <li class="filter-list__item">Зубна паста</li>
-                                    <li class="filter-list__item">Гелі</li>
-                                    <li class="filter-list__item">Мило</li>
-                                    <li class="filter-list__item filter-list__item--padding">Інші засоби гігієни</li>
-                                </ul>
-                            </li>
-                        
-                            <li class="filter__menu">
-                        
-                                <div class="filter__icon-title-box js-filter__menu-medicine">
-                        
-                                    <svg class="filter__icon js-filter__icon-medicine-close" width="32" height="32">
-                        
-                                        <use href="./images/icon/sprite.svg#tablet"></use>
-                                    </svg>
-                        
-                                    <svg class="filter__icon-open js-filter__icon-medicine-open" width="32" height="32">
-                        
-                                        <use href="./images/icon/sprite.svg#tablet-open"></use>
-                                    </svg>
-                        
-                                    <h2 class="filter-icon-title__title">Медицина</h2>
-                                </div>
-                        
-                                <ul class="filter__list js-filter__medicine-list">
-                                    <li class="filter-list__item">Вітаміни</li>
-                                    <li class="filter-list__item filter-list__item--padding">Лікувальні засоби</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <h2 class="filter__title">Бренди</h2>
-                        
-                        <h2 class="filter__title">Всі бренди</h2>
-                        
-                        <h2 class="filter__title">Виробник</h2>
-                        
-                        <button class="reg-login__button reg-login__button--display" type="submit">
-                            <span class="reg-login__button__text">Фільтрувати</span>
-                        </button>
+                    <ul class="filter__main-list">
+                    
+                        <li class="filter__menu">
+                    
+                            <div class="filter__icon-title-box js-filter__menu-food">
+                    
+                                <svg class="filter__icon js-filter__icon-food-close" width="32" height="60">
+                    
+                                    <use href="./images/icon/sprite.svg#food"></use>
+                                </svg>
+                    
+                                <svg class="filter__icon-open js-filter__icon-food-open" width="32" height="60">
+                    
+                                    <use href="./images/icon/sprite.svg#food_open"></use>
+                                </svg>
+                    
+                                <h2 class="filter-icon-title__title">Продукти харчування</h2>
+                            </div>
+                    
+                            <ul class="filter__list js-filter__food-list">
+                    
+                                <li class="filter-list__item">Сухі сніданки</li>
+                    
+                                <li class="filter-list__item">М’ясні продукти</li>
+                    
+                                <li class="filter-list__item">Сирні продукти</li>
+                    
+                                <li class="filter-list__item">Макарони</li>
+                    
+                                <li class="filter-list__item">Консервована продукція та паштети</li>
+                    
+                                <li class="filter-list__item">Оливки і оливкове масло</li>
+                    
+                                <li class="filter-list__item">Модифікатори смаку</li>
+                    
+                                <li class="filter-list__item">Солодощі</li>
+                    
+                                <li class="filter__secondary-menu">
+                    
+                                    <div class="filter__secondary-icon-title-box filter__secondary-icon-title-box--margin js-filter__secondary-menu-food">
+                    
+                                        <svg class="filter__icon-secondary js-filter__secondary-icon-food-close" width="30" height="32">
+                    
+                                            <use href="./images/icon/sprite.svg#tea-cofee"></use>
+                                        </svg>
+                    
+                                        <svg class="filter__icon-secondary-open icon--position-cofee js-filter__secondary-icon-food-open"
+                                            width="39" height="32">
+                    
+                                            <use href="./images/icon/sprite.svg#tea-cofee_open"></use>
+                                        </svg>
+                    
+                                        <h3 class="filter-icon-title__secondary-title">Чай, кава, капучіно, сік</h3>
+                                    </div>
+                    
+                                    <ul class="filter__secondary-list js-filter__food-secondary-list">
+                    
+                                        <li class="filter__tea-coffee">Чай</li>
+                    
+                                        <li class="filter__tea-coffee">Кава в зернах</li>
+                    
+                                        <li class="filter__tea-coffee">Мелена кава</li>
+                    
+                                        <li class="filter__tea-coffee">Розчинна кава та капучіно</li>
+                    
+                                        <li class="filter__tea-coffee">Сік</li>
+                                    </ul>
+                    
+                                </li>
+                    
+                                <li class="filter-list__item filter-list__item--padding">Інші продукти харчування</li>
+                            </ul>
+                        </li>
+                    
+                        <li class="filter__menu">
+                    
+                            <div class="filter__icon-title-box js-filter__menu-chemical">
+                    
+                                <svg class="filter__icon js-filter__icon-chemical-close" width="32" height="40">
+                    
+                                    <use href="./images/icon/sprite.svg#chemical"></use>
+                                </svg>
+                    
+                                <svg class="filter__icon-open js-filter__icon-chemical-open" width="32" height="40">
+                    
+                                    <use href="./images/icon/sprite.svg#chemical_open"></use>
+                                </svg>
+                    
+                                <h2 class="filter-icon-title__title">Побудтова хімія</h2>
+                            </div>
+                    
+                            <ul class="filter__list js-filter__chemical-list">
+                    
+                                <li class="filter__secondary-menu">
+                    
+                                    <div class="filter__secondary-icon-title-box js-filter__secondary-menu-chemical">
+                    
+                                        <svg class="filter__icon-secondary js-filter__secondary-icon-chemical-close" width="32" height="32">
+                    
+                                            <use href="./images/icon/sprite.svg#wash"></use>
+                                        </svg>
+                    
+                                        <svg class="filter__icon-secondary-open icon--position-wash js-filter__secondary-icon-chemical-open"
+                                            width="32" height="32">
+                    
+                                            <use href="./images/icon/sprite.svg#wash_open"></use>
+                                        </svg>
+                    
+                                        <h3 class="filter-icon-title__secondary-title">Засоби для миття</h3>
+                                    </div>
+                    
+                                    <ul class="filter__secondary-list js-filter__chemical-secondary-list">
+                    
+                                        <li>Порошки</li>
+                    
+                                        <li>Гелі для прання</li>
+                    
+                                        <li>Капсули та таблетки</li>
+                    
+                                        <li>Ополіскувачі</li>
+                    
+                                        <li>Засоби для миття посуду</li>
+                    
+                                        <li>Інші засоби для миття</li>
+                                    </ul>
+                    
+                                </li>
+                    
+                                <li class="filter-list__item">Засоби для чищення</li>
+                    
+                                <li class="filter-list__item">Засоби для дезінфекції</li>
+                    
+                                <li class="filter-list__item">Освіжувачі та ароматизатори повітря</li>
+                    
+                                <li class="filter-list__item filter-list__item--padding">Засоби для виведення плям</li>
+                            </ul>
+                        </li>
+                    
+                        <li class="filter__menu">
+                    
+                            <div class="filter__icon-title-box js-filter__menu-gigiena">
+                    
+                                <svg class="filter__icon js-filter__icon-gigiena-close" width="32" height="50">
+                    
+                                    <use href="./images/icon/sprite.svg#gigiena"></use>
+                                </svg>
+                    
+                                <svg class="filter__icon-open icon--position-gigiena js-filter__icon-gigiena-open" width="32" height="50">
+                    
+                                    <use href="./images/icon/sprite.svg#gigiena_open"></use>
+                                </svg>
+                    
+                                <h2 class="filter-icon-title__title">Засоби гігієни</h2>
+                            </div>
+                    
+                            <ul class="filter__list js-filter__gigiena-list">
+                                <li class="filter-list__item">Для волосся</li>
+                                <li class="filter-list__item">Для гоління</li>
+                                <li class="filter-list__item">Зубна паста</li>
+                                <li class="filter-list__item">Гелі</li>
+                                <li class="filter-list__item">Мило</li>
+                                <li class="filter-list__item filter-list__item--padding">Інші засоби гігієни</li>
+                            </ul>
+                        </li>
+                    
+                        <li class="filter__menu">
+                    
+                            <div class="filter__icon-title-box js-filter__menu-medicine">
+                    
+                                <svg class="filter__icon js-filter__icon-medicine-close" width="32" height="32">
+                    
+                                    <use href="./images/icon/sprite.svg#tablet"></use>
+                                </svg>
+                    
+                                <svg class="filter__icon-open js-filter__icon-medicine-open" width="32" height="32">
+                    
+                                    <use href="./images/icon/sprite.svg#tablet-open"></use>
+                                </svg>
+                    
+                                <h2 class="filter-icon-title__title">Медицина</h2>
+                            </div>
+                    
+                            <ul class="filter__list js-filter__medicine-list">
+                                <li class="filter-list__item">Вітаміни</li>
+                                <li class="filter-list__item filter-list__item--padding">Лікувальні засоби</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h2 class="filter__title">Бренди</h2>
+                    
+                    <h2 class="filter__title">Всі бренди</h2>
+                    
+                    <h2 class="filter__title">Виробник</h2>
+                    
+                    <button class="reg-login__button reg-login__button--display" type="submit">
+                        <span class="reg-login__button__text">Фільтрувати</span>
+                    </button>
                 </div>
 
-                
                 <div class="shop">
 
-                    <h2 class="shop__title shop__title--position">Сортувати</h2>
+                    <div class="shop_filter">
+
+                        <button class="filter__button filter__button--mobile" type="button" aria-expanded="false" aria-controls="filter"
+                            data-mobile-search-button>
+                        
+                            <svg class="filter__icon-search" width="32" height="32" aria-label="Перемикач мобільного пошуку">
+                        
+                                <use class="icon-search-loupe" href="./images/icon/sprite.svg#search"></use>
+
+                                <use class="icon-search-cross" href="./images/icon/sprite.svg#icon-cross"></use>
+                            </svg>
+                        </button>
+                        
+                        <h2 class="shop__title">Сортувати</h2>
+                    </div>
 
                     <ul class="shop__list js-shop__list"></ul>
 

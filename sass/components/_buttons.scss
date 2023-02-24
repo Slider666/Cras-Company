@@ -118,36 +118,29 @@
 
 // Кнопка поиска
 .filter__button {
-  padding: 0;
-  margin-left: 10px;
+  border: 2px solid var(--pure-white);
 
-  border-style: none;
+  padding: 3px 3px 0 3px;
 
   background-color: var(--pure-white);
 
   cursor: pointer;
-}
-
-.filter__button--mobile {
-  position: absolute;
-  top: -10px;
-  z-index: 100;
-
-  border: 2px solid var(--pure-white);
-
-  padding: 3px;
-
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
 
   &:hover,
   &:focus {
     border: 2px solid var(--link-color);
     border-radius: var(--border-radius);
-
-    padding-bottom: 0;
   }
+}
+
+.filter__button--mobile {
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.filter__button--margin {
+  margin-left: 10px;
 }
 
 .filter__button .icon-search-cross {
