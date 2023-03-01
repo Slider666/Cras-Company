@@ -129,19 +129,19 @@
 <!-- Модальное окно регистрации -->
     <div class="backdrop is-hidden" data-modal-register>
         <div class="modal">
-
+    
             <img class="img-modal-register" src="./images/logo-bg.png" alt="Логотип" width="125px">
-
+    
             <button class="modal__button-close" type="button" data-modal-register-close>
                 <svg width="50" height="50">
                     <use href="./images/icon/sprite.svg#logoblack"></use>
                 </svg>
             </button>
-
+    
             <h2 class="modal__title">Реєстрація у компанії <span class="cinzel" lang="en">&#171;CRAS&#187;</span></h2>
-
+    
             <form class="modal__form" name="registration-form" autocomplete="on">
-
+    
                 <label class="modal__label-title" for="user-name">Ім'я</label>
                 <div class="modal__case">
                     <input id="user-name" class="modal__input js-first-name-input" type="text" name="user-name"
@@ -151,7 +151,7 @@
                         <use href="./images/icon/sprite.svg#form-person"></use>
                     </svg>
                 </div>
-
+    
                 <label class="modal__label-title" for="surname">Прізвице</label>
                 <div class="modal__case">
                     <input id="user-name" class="modal__input js-last-name-input" type="text" name="surname" minlength="2"
@@ -161,7 +161,7 @@
                         <use href="./images/icon/sprite.svg#form-person"></use>
                     </svg>
                 </div>
-
+    
                 <label class="modal__label-title" for="phone">Телефон</label>
                 <div class="modal__case">
                     <input id="phone" class="modal__input" type="tel" name="phone" value="+380 (__) ___-__-__"
@@ -171,7 +171,7 @@
                         <use href="./images/icon/sprite.svg#form-phone"></use>
                     </svg>
                 </div>
-
+    
                 <label class="modal__label-title" for="email">Пошта</label>
                 <div class="modal__case">
                     <input id="email" class="modal__input" type="email" name="email" minlength="6"
@@ -181,11 +181,11 @@
                         <use href="./images/icon/sprite.svg#form-email"></use>
                     </svg>
                 </div>
-
+    
                 <label class="modal__label-title" for="password">Пароль</label>
                 <div class="modal__case">
-                    <input id="password-register" class="modal__input" type="password" name="password" minlength="6" maxlength="16"
-                        placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                    <input id="password-register" class="modal__input" type="password" name="password" minlength="6"
+                        maxlength="16" placeholder="madeInFuture2023" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                         title="Пароль повинен містити латинськими симвомами мінімум одну велику літеру, одну малу літеру і цифру"
                         required>
                     <svg class="modal__icon" width="18" height="18">
@@ -198,7 +198,7 @@
                         <use href="./images/icon/sprite.svg#icon-eye-open"></use>
                     </svg>
                 </div>
-
+    
                 <!-- <label class="modal__label-title" for="password">Підтвердіть пароль</label>
                     <div class="modal__case">
                         <input 
@@ -216,15 +216,16 @@
                             <use href="./images/icon/sprite.svg#password-confirm"></use>
                         </svg>
                     </div> -->
-
+    
                 <div class="modal__license">
                     <Label class="modal__license-label" for="license">
-                        <input id="license" class="modal__checkbox" type="checkbox" name="agree" value="license">
+                        <input id="license" class="modal__checkbox js-modal__checkbox" type="checkbox" name="agree"
+                            value="license">
                         <svg class="modal__checkbox-icon" width="20" height="20">
                             <use class="modal__icon-unchecked" href="./images/icon/sprite.svg#cube"></use>
                             <use class="modal__icon-checked" href="./images/icon/sprite.svg#icon_check"></use>
                         </svg>
-
+    
                         <div> Я, <b><span id="first-name-output"> Тарас</span></b>
                             <b><span id="last-name-output"> Бульба</span></b>, <br>
                             підтверджую та приймаю <br class="br-license">
@@ -233,11 +234,11 @@
                             </a>
                         </div>
                     </Label>
-
+    
                 </div>
-
-                <button class="form__button" type="submit">
-
+    
+                <button class="form__button js-form__button" type="submit" disabled>
+    
                     <span class="form__button__text">Приєднатися</span>
                 </button>
             </form>

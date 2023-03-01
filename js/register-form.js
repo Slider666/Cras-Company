@@ -67,3 +67,15 @@ const showPassword = () => {
 };
 
 [...eyeCloseElements, ...eyeOpenElements].forEach(elem => elem.addEventListener('click', showPassword));
+
+// ===========================================================================
+// Активация кнопки регистрации
+// ===========================================================================
+const licenseCheckbox = document.querySelector('.js-modal__checkbox');
+const btnRegister = document.querySelector('.js-form__button');
+
+licenseCheckbox.addEventListener('change', onLicenseChange);
+
+function onLicenseChange(event) {
+  btnRegister.disabled = !event.currentTarget.checked;
+}
