@@ -1,91 +1,90 @@
-(() => {
-  const refs = {
-    // Кнопки хедера
-    openModalMobileMenuBtn: document.querySelector("[data-modal-mobile-menu-open]"),
-    openModalRegisterBtn: document.querySelector("[data-modal-register-open]"),
-    openModalEnterBtn: document.querySelector('[data-modal-enter-open]'),
-    
-    // Модальное окно мобилки
-    modalMobileMenu: document.querySelector("[data-modal-mobile-menu]"),
-    closeModalMobileMenuBtn: document.querySelector('[data-modal-mobile-menu-close]'),
-    openModalRegisterMobileBtn: document.querySelector("[data-modal-register-open-mobile]"),
-    openModalEnterMobileBtn: document.querySelector('[data-modal-enter-open-mobile]'),
+const refs = {
+  // Кнопки хедера
+  openModalMobileMenuBtn: document.querySelector("[data-modal-mobile-menu-open]"),
+  openModalRegisterBtn: document.querySelector("[data-modal-register-open]"),
+  openModalEnterBtn: document.querySelector('[data-modal-enter-open]'),
+  
+  // Модальное окно мобилки
+  modalMobileMenu: document.querySelector("[data-modal-mobile-menu]"),
+  closeModalMobileMenuBtn: document.querySelector('[data-modal-mobile-menu-close]'),
+  openModalRegisterMobileBtn: document.querySelector("[data-modal-register-open-mobile]"),
+  openModalEnterMobileBtn: document.querySelector('[data-modal-enter-open-mobile]'),
 
-    // Модальное окно регистрации
-    modalRegister: document.querySelector("[data-modal-register]"),
-    closeModalRegiserBtn: document.querySelector("[data-modal-register-close]"),
+  // Модальное окно регистрации
+  modalRegister: document.querySelector("[data-modal-register]"),
+  closeModalRegiserBtn: document.querySelector("[data-modal-register-close]"),
 
-    // Модальное окно входа
-    modalEnter: document.querySelector('[data-modal-enter]'),
-    closeModalEnterBtn: document.querySelector('[data-modal-enter-close]'),
+  // Модальное окно входа
+  modalEnter: document.querySelector('[data-modal-enter]'),
+  closeModalEnterBtn: document.querySelector('[data-modal-enter-close]'),
 
-    // Кнопки футера
-    openModalRegisterBtnFooter: document.querySelector("[data-modal-register-open-footer]"),
-    openModalEnterBtnFooter: document.querySelector("[data-modal-enter-open-footer]"),
-  };
+  // Кнопки футера
+  openModalRegisterBtnFooter: document.querySelector("[data-modal-register-open-footer]"),
+  openModalEnterBtnFooter: document.querySelector("[data-modal-enter-open-footer]"),
+};
 
-  // refs.openModalMobileMenuBtn.addEventListener("click", toggleModalMobileMenu);
-  // refs.closeModalMobileMenuBtn.addEventListener("click", toggleModalMobileMenu);
+const html = document.documentElement;
 
-  // function toggleModalMobileMenu() {
-  //   refs.modalMobileMenu.classList.toggle("is-hidden");
-  // }
-
-  // refs.openModalRegisterMobileBtn.addEventListener("click", toggleModalRegister)
-  // refs.openModalRegisterBtn.addEventListener("click", toggleModalRegister);
-  // refs.closeModalRegiserBtn.addEventListener("click", toggleModalRegister);
-  // refs.openModalRegisterBtnFooter.addEventListener("click", toggleModalRegister);
-
-  // function toggleModalRegister() {
-  //   refs.modalRegister.classList.toggle("is-hidden");
-  // }
-
-  // refs.openModalEnterMobileBtn.addEventListener("click", toggleModalEnter)
-  // refs.openModalEnterBtn.addEventListener("click", toggleModalEnter);
-  // refs.closeModalEnterBtn.addEventListener("click", toggleModalEnter);
-  // refs.openModalEnterBtnFooter.addEventListener('click', toggleModalEnter);
-
-  // function toggleModalEnter() {
-  //   refs.modalEnter.classList.toggle("is-hidden");
-  // }
-
-  function toggleModal(modal) {
-    document.body.classList.toggle('modal-open');
-    
-    modal.classList.toggle("is-hidden");
-
-    function closeModal() {
-      document.body.classList.remove('modal-open');
-      modal.classList.add("is-hidden");
-    }
-
-    window.addEventListener('keydown', function(event) {
-      if (event.code === 'Escape') {
-        closeModal();
-      }
-    });
+function onEscKeyPress(event, modal) {
+  if (event.code === 'Escape') {
+    onCloseModal(modal);
   }
+}
 
-  // Отрытие и закрытие модального окна мобилки
-  refs.openModalMobileMenuBtn.addEventListener("click", () => toggleModal(refs.modalMobileMenu));
-  refs.closeModalMobileMenuBtn.addEventListener("click", () => toggleModal(refs.modalMobileMenu));
+function onBackdropClick(event, modal) {
+  if (event.target === event.currentTarget) {
+    onCloseModal(modal)
+  }
+}
+
+function onOpenModal(modal) {
+  const marginSize = window.innerWidth - html.clientWidth;
+  
+  window.addEventListener('keydown', (event) => onEscKeyPress(event, modal));
+
+  modal.addEventListener('click', (event) => onBackdropClick(event, modal));
+  
+  document.body.classList.add('modal-open');
+  modal.classList.remove("is-hidden");
+
+  if (marginSize) {
+    html.style.marginRight = marginSize + "px";
+  }
+}
+
+function onCloseModal(modal) {
+  window.removeEventListener('keydown', (event) => onEscKeyPress(event, modal));
+  modal.removeEventListener('click', (event) => onBackdropClick(event, modal));
+
+  document.body.classList.remove('modal-open');
+  modal.classList.add("is-hidden");
+
+  html.style.marginRight = "";
+}
+
+// ===========================================================================
+// Отрытие и закрытие модального окна мобилки
+// ===========================================================================
+  refs.openModalMobileMenuBtn.addEventListener("click", () => onOpenModal(refs.modalMobileMenu));
+  refs.closeModalMobileMenuBtn.addEventListener("click", () => onCloseModal(refs.modalMobileMenu));
 
   function addClickHandler(openModalMobileBtn, modalMobileMenu, modalWindow) {
     openModalMobileBtn.addEventListener("click", () => {
-      toggleModal(modalMobileMenu);
-      toggleModal(modalWindow);
+      onCloseModal(modalMobileMenu);
+      onOpenModal(modalWindow);
     });
   }
 
   addClickHandler(refs.openModalRegisterMobileBtn, refs.modalMobileMenu, refs.modalRegister);
   addClickHandler(refs.openModalEnterMobileBtn, refs.modalMobileMenu, refs.modalEnter);
 
-  // Открытие и закрытие модального окна регистрации и входа
-  refs.openModalRegisterBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
-  refs.closeModalRegiserBtn.addEventListener("click", () => toggleModal(refs.modalRegister));
-  refs.openModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
-  refs.closeModalEnterBtn.addEventListener("click", () => toggleModal(refs.modalEnter));
-  
-  refs.openModalRegisterBtnFooter.addEventListener("click", () => toggleModal(refs.modalRegister));
-  refs.openModalEnterBtnFooter.addEventListener("click", () => toggleModal(refs.modalEnter));
-})();
+// ===========================================================================
+// Открытие и закрытие модального окна регистрации и входа
+// ===========================================================================
+refs.openModalRegisterBtn.addEventListener("click", () => onOpenModal(refs.modalRegister));
+refs.openModalRegisterBtnFooter.addEventListener("click", () => onOpenModal(refs.modalRegister));
+refs.closeModalRegiserBtn.addEventListener("click", () => onCloseModal(refs.modalRegister));
+
+refs.openModalEnterBtn.addEventListener("click", () => onOpenModal(refs.modalEnter));
+refs.openModalEnterBtnFooter.addEventListener("click", () => onOpenModal(refs.modalEnter));
+refs.closeModalEnterBtn.addEventListener("click", () => onCloseModal(refs.modalEnter));

@@ -1069,6 +1069,11 @@ img {
   margin-left: 0;
 }
 
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -1129,10 +1134,6 @@ img {
   .modal--corrective {
     padding-top: 80px;
   }
-}
-
-body.modal-open {
-  overflow: hidden;
 }
 
 .modal__form input::-webkit-input-placeholder {
